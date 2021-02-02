@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Layout from "../../../components/layout"
 import Image from "../../../components/image"
@@ -8,11 +8,13 @@ import { H1, MediumText } from "../../styles/TextStyles"
 import { BeginButtonText } from "../../../components/styles/TextStyles"
 
 export default function IpadBeginScreen(props) {
+  console.log(props)
+
   return (
     <Screen>
       <ContentWrapper>
         <Welcome>Welcome</Welcome>
-        <ButtonWrapper>
+        <ButtonWrapper onClick={() => props.changeScreen(2)}>
           <PurpleButton>
             <Title>Begin</Title>
           </PurpleButton>
@@ -23,9 +25,14 @@ export default function IpadBeginScreen(props) {
 }
 
 const Screen = styled.div`
-  width: 439px;
-  height: 328px;
+  width: 435px;
+  height: 326px;
   background: white;
+
+  @media (max-width: 530px) {
+    width: 247px;
+    height: 174px;
+  }
 `
 
 const ContentWrapper = styled.div`
@@ -47,25 +54,33 @@ const Welcome = styled.p`
   flex-direction: column;
   align-items: center;
   display: flex;
+
+  @media (max-width: 530px) {
+    font-size: 20px;
+  }
 `
 
 const ButtonWrapper = styled.div`
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 0px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   display: flex;
   margin: auto;
+
+  @media (max-width: 530px) {
+    top: 55%;
+  }
 `
 
 const PurpleButton = styled.div`
   width: 120px;
   height: 30px;
   position: absolute;
-  top: 50%;
+  top: 60%;
   background: #6a80fb;
   border-radius: 8px;
   display: grid;
@@ -85,6 +100,16 @@ const PurpleButton = styled.div`
       transform: scale(1.01);
     }
   }
+
+    @media (max-width: 530px) {
+      width: 68px.;
+      height: 25px;
+      border-radius: 5px;
+    }
 `
 
-const Title = styled(BeginButtonText)``
+const Title = styled(BeginButtonText)`
+  @media (max-width: 530px) {
+    font-size: 8px;
+  }
+`

@@ -31,7 +31,7 @@ export default function IpadSection() {
 const Wrapper = styled.div`
   background: ${projectRetail_themes.blue.background};
   height: 1024px;
-  //overflow: hidden; //Clip the overflow content
+  overflow: hidden; //Clip the overflow content
 `
 
 const ContentWrapper = styled.div`
@@ -40,16 +40,29 @@ const ContentWrapper = styled.div`
   padding: 100px 0px 0px 0px;
   display: grid;
   gap: 60px;
+
+  @media (max-width: 530px) {
+    gap: 30px;
+  }
 `
 
 const Title = styled(H1)`
   margin: auto;
   color: ${projectRetail_themes.blue.text1};
+
+  @media (max-width: 530px) {
+    font-size: 50px;
+  }
 `
 
 const Description = styled(MediumText)`
-  max-width: 847px;
+  //max-width: 847px;
   color: ${projectRetail_themes.blue.text1};
+  margin: auto;
+
+  @media (max-width: 846px) {
+    padding: 0px 20px 0px 20px;
+  }
 `
 
 /**
