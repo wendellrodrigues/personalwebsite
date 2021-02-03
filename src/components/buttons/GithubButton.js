@@ -8,12 +8,12 @@ export default function GithubButton(props) {
 
   return (
     <Wrapper>
-      <Link to={url} target="_blank" rel="noopener noreferrer">
+      <a href={url} target="_blank" rel="noopener noreferrer">
         <WhiteButton>
           <Icon src="/images/icons/github-icon.svg" className="icon" />
           <Title>View on GitHub</Title>
         </WhiteButton>
-      </Link>
+      </a>
     </Wrapper>
   )
 }

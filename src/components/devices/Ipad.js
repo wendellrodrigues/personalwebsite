@@ -8,19 +8,35 @@ import { H1, MediumText } from "../styles/TextStyles"
 
 //Screens for the iPad
 import IpadBeginScreen from "../screens/ipad-screens/IpadBeginScreen.js"
+import IpadSelectNameScreen from "../screens/ipad-screens/IpadSelectNameScreen.js"
 
 export default function Ipad(props) {
-  //State passed to props to decide which screen component to display
-  const [screen, setScreen] = useState(1)
+  //Initial state received from props. Can also be changed from buttons below (1..2..3)
+  const { state } = props
 
   //Conditionally renders the screen to the different iPad steps
   const renderScreen = () => {
-    if (screen == 1) {
-      return <IpadBeginScreen changeScreen={screen => setScreen(screen)} />
-    } else if (screen == 2) {
-      return <div></div>
+    if (state == 1) {
+      return (
+        <IpadBeginScreen
+          changeScreen={screen => {
+            props.changeState(2)
+          }}
+        />
+      )
+    } else if (state == 2) {
+      return <IpadSelectNameScreen />
+    } else if (state == 3) {
+      props.changeState(1)
     } else {
-      setScreen(1)
+      return (
+        <IpadBeginScreen
+          changeScreen={screen => {
+            props.changeState(2)
+          }}
+        />
+      )
+      props.changeState(1)
     }
   }
 
@@ -41,9 +57,16 @@ const IpadImg = styled.img`
   width: 530px;
   height: 370px;
 
+  //Larger phones
   @media (max-width: 530px) {
     width: 300px;
     height: 209px;
+  }
+
+  //Smaller phones
+  @media (max-width: 400px) {
+    width: 250px;
+    height: 150px;
   }
 `
 

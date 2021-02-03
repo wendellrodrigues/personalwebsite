@@ -7,16 +7,19 @@ import { projectRetail_themes } from "../../styles/ColorStyles"
 import { H1, MediumText } from "../../styles/TextStyles"
 import { BeginButtonText } from "../../../components/styles/TextStyles"
 
-export default function IpadBeginScreen(props) {
-  console.log(props)
+import {
+  iPadScreen,
+  iPadTitle,
+} from "../../../components/styles/ScreenStyles.js"
 
+export default function IpadBeginScreen(props) {
   return (
     <Screen>
       <ContentWrapper>
-        <Welcome>Welcome</Welcome>
+        <Title>Welcome</Title>
         <ButtonWrapper onClick={() => props.changeScreen(2)}>
           <PurpleButton>
-            <Title>Begin</Title>
+            <ButtonText>Begin</ButtonText>
           </PurpleButton>
         </ButtonWrapper>
       </ContentWrapper>
@@ -24,16 +27,7 @@ export default function IpadBeginScreen(props) {
   )
 }
 
-const Screen = styled.div`
-  width: 435px;
-  height: 326px;
-  background: white;
-
-  @media (max-width: 530px) {
-    width: 247px;
-    height: 174px;
-  }
-`
+const Screen = styled(iPadScreen)``
 
 const ContentWrapper = styled.div`
   display: grid;
@@ -42,22 +36,8 @@ const ContentWrapper = styled.div`
   align-items: center;
 `
 
-const Welcome = styled.p`
-  font-size: 25px;
-  font-weight: 700;
-  width: 100%;
-  //height: 100%;
-  position: absolute;
+const Title = styled(iPadTitle)`
   top: 40%;
-  left: 0px;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-
-  @media (max-width: 530px) {
-    font-size: 20px;
-  }
 `
 
 const ButtonWrapper = styled.div`
@@ -73,6 +53,11 @@ const ButtonWrapper = styled.div`
 
   @media (max-width: 530px) {
     top: 55%;
+  }
+
+  //Smaller phones
+  @media (max-width: 400px) {
+    top: 60%;
   }
 `
 
@@ -106,10 +91,21 @@ const PurpleButton = styled.div`
       height: 25px;
       border-radius: 5px;
     }
+
+    //Smaller phones
+  @media (max-width: 400px) {
+    width: 47px;
+    height: 18px;
+
+  }
 `
 
-const Title = styled(BeginButtonText)`
+const ButtonText = styled(BeginButtonText)`
   @media (max-width: 530px) {
     font-size: 8px;
+  }
+
+  //Smaller phones
+  @media (max-width: 400px) {
   }
 `
