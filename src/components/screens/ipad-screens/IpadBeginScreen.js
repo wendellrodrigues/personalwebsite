@@ -7,10 +7,12 @@ import { projectRetail_themes } from "../../styles/ColorStyles"
 import { H1, MediumText } from "../../styles/TextStyles"
 import { BeginButtonText } from "../../../components/styles/TextStyles"
 
+import { iPadScreen, iPadTitle } from "../../../components/styles/IpadStyles.js"
+
 import {
-  iPadScreen,
-  iPadTitle,
-} from "../../../components/styles/ScreenStyles.js"
+  PurpleButton,
+  PurpleButtonText,
+} from "../../../components/styles/ButtonStyles"
 
 export default function IpadBeginScreen(props) {
   return (
@@ -18,9 +20,9 @@ export default function IpadBeginScreen(props) {
       <ContentWrapper>
         <Title>Welcome</Title>
         <ButtonWrapper onClick={() => props.changeScreen(2)}>
-          <PurpleButton>
+          <BeginButton>
             <ButtonText>Begin</ButtonText>
-          </PurpleButton>
+          </BeginButton>
         </ButtonWrapper>
       </ContentWrapper>
     </Screen>
@@ -43,7 +45,7 @@ const Title = styled(iPadTitle)`
 const ButtonWrapper = styled.div`
   width: 100%;
   position: absolute;
-  top: 52%;
+  top: 58%;
   left: 0px;
   justify-content: center;
   flex-direction: column;
@@ -51,61 +53,20 @@ const ButtonWrapper = styled.div`
   display: flex;
   margin: auto;
 
-  @media (max-width: 530px) {
+  @media (max-width: 742px) {
     top: 55%;
   }
 
-  //Smaller phones
-  @media (max-width: 400px) {
-    top: 60%;
-  }
-`
-
-const PurpleButton = styled.div`
-  width: 120px;
-  height: 30px;
-  position: absolute;
-  top: 60%;
-  background: #6a80fb;
-  border-radius: 8px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  *,
-  & {
-    transition: 1s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1); \
-  }
-  :hover {
-    cursor: pointer;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-      0px 30px 60px rgba(23, 0, 102, 0.5),
-      inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
-    transform: translateY(-0.5px) scale(1.01);
-    .icon {
-      transform: scale(1.01);
-    }
-  }
-
-    @media (max-width: 530px) {
-      width: 68px.;
-      height: 25px;
-      border-radius: 5px;
-    }
-
-    //Smaller phones
-  @media (max-width: 400px) {
-    width: 47px;
-    height: 18px;
-
-  }
-`
-
-const ButtonText = styled(BeginButtonText)`
-  @media (max-width: 530px) {
-    font-size: 8px;
+  @media (max-width: 588) {
+    top: 50%;
   }
 
   //Smaller phones
   @media (max-width: 400px) {
+    top: 55%;
   }
 `
+
+const BeginButton = styled(PurpleButton)``
+
+const ButtonText = styled(PurpleButtonText)``

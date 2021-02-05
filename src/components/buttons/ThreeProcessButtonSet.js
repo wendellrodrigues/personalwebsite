@@ -5,7 +5,8 @@ import ProcessButton from "./ProcessButton.js"
 import {
   BigCirleButton,
   SmallCircleStyle,
-} from "../../components/styles/ScreenStyles.js"
+  ThreeProcessWrapper,
+} from "../../components/styles/ButtonStyles.js"
 
 export default function ThreeProcessButtonSet(props) {
   const { state } = props
@@ -43,13 +44,6 @@ export default function ThreeProcessButtonSet(props) {
   )
 }
 
-const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(9, auto);
-  gap: 20px;
-  justify-content: center;
-  align-content: center;
-  position: relative;
-`
+const Wrapper = styled(ThreeProcessWrapper)``
 
 const SmallCircle = styled(SmallCircleStyle)``

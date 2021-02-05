@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { ButtonText } from "../../components/styles/TextStyles"
+import { GithubButtonWhiteStyle } from "../../components/styles/ButtonStyles"
 
 export default function GithubButton(props) {
   const { url } = props
@@ -27,32 +28,6 @@ const Icon = styled.img`
   height: 30px;
 `
 
-const WhiteButton = styled.div`
-  width: 175px;
-  height: 41px;
-  background: #ffffff;
-  border-radius: 15px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: auto auto;
-  gap: 15px;
+const WhiteButton = styled(GithubButtonWhiteStyle)``
 
-  *,
-  & {
-    transition: 1s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1); \
-  }
-  :hover {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-      0px 30px 60px rgba(23, 0, 102, 0.5),
-      inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
-    transform: translateY(-0.5px) scale(1.01);
-    .icon {
-      transform: scale(1.01);
-    }
-  }
-`
-
-const Title = styled(ButtonText)`
-  color: black;
-`
+const Title = styled(ButtonText)``

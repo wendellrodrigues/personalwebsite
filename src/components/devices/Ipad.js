@@ -9,6 +9,10 @@ import { H1, MediumText } from "../styles/TextStyles"
 //Screens for the iPad
 import IpadBeginScreen from "../screens/ipad-screens/IpadBeginScreen.js"
 import IpadSelectNameScreen from "../screens/ipad-screens/IpadSelectNameScreen.js"
+import IpadProductScreen from "../screens/ipad-screens/IpadProductScreen.js"
+
+//Styles
+import { iPadDevice } from "../../components/styles/iPadStyles.js"
 
 export default function Ipad(props) {
   //Initial state received from props. Can also be changed from buttons below (1..2..3)
@@ -25,9 +29,15 @@ export default function Ipad(props) {
         />
       )
     } else if (state == 2) {
-      return <IpadSelectNameScreen />
+      return (
+        <IpadSelectNameScreen
+          changeScreen={screen => {
+            props.changeState(3)
+          }}
+        />
+      )
     } else if (state == 3) {
-      props.changeState(1)
+      return <IpadProductScreen />
     } else {
       return (
         <IpadBeginScreen
@@ -53,28 +63,13 @@ const IpadWrapper = styled.div`
   position: relative;
 `
 
-const IpadImg = styled.img`
-  width: 530px;
-  height: 370px;
-
-  //Larger phones
-  @media (max-width: 530px) {
-    width: 300px;
-    height: 209px;
-  }
-
-  //Smaller phones
-  @media (max-width: 400px) {
-    width: 250px;
-    height: 150px;
-  }
-`
+const IpadImg = styled(iPadDevice)``
 
 const ScreenWrapper = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0px;
+  top: -2px;
   left: 0px;
   justify-content: center;
   flex-direction: column;

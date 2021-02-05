@@ -4,7 +4,7 @@ import styled from "styled-components"
 import {
   BigCircleButton,
   SmallCircleStyle,
-} from "../../components/styles/ScreenStyles.js"
+} from "../../components/styles/ButtonStyles.js"
 
 export default function ProcessButton(props) {
   //Props it will receive is the number (step)

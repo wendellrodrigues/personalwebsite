@@ -43,6 +43,7 @@ export default function IpadSection() {
           changeState={state => setState(state)}
         />
         <GithubButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
+        <NextPage>Find my size</NextPage>
       </ContentWrapper>
     </Wrapper>
   )
@@ -50,7 +51,7 @@ export default function IpadSection() {
 
 const Wrapper = styled.div`
   background: ${projectRetail_themes.blue.background};
-  height: 1024px;
+  height: 1200px;
   overflow: hidden; //Clip the overflow content
 `
 
@@ -61,7 +62,7 @@ const ContentWrapper = styled.div`
   display: grid;
   gap: 60px;
 
-  @media (max-width: 530px) {
+  @media (max-width: 742px) {
     gap: 30px;
   }
 `
@@ -70,7 +71,7 @@ const Title = styled(H1)`
   margin: auto;
   color: ${projectRetail_themes.blue.text1};
 
-  @media (max-width: 530px) {
+  @media (max-width: 742px) {
     font-size: 50px;
   }
 `
@@ -88,6 +89,11 @@ const Description = styled(MediumText)`
   @media (max-width: 450px) {
     min-height: 75px;
   }
+`
+const NextPage = styled(MediumText)`
+  color: ${projectRetail_themes.blue.text1};
+  margin: auto;
+  margin-top: -20px;
 `
 
 /**
