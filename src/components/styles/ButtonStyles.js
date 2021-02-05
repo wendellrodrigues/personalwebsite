@@ -26,7 +26,7 @@ export const BigCircleButton = styled.div`
     height: 40px;
   }
 
-  ${BigCircleButton}:hover & {
+  :hover & {
     filter: hue-rotate(10deg) brightness(150%) saturate(120%);
   }
   *,
