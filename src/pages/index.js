@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import IpadSection from "../components/sections/IpadSection"
+import IpadSection from "../components/sections/IpadSection.js"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
