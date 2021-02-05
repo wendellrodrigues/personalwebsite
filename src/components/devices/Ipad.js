@@ -12,7 +12,7 @@ import IpadSelectNameScreen from "../screens/ipad-screens/IpadSelectNameScreen.j
 import IpadProductScreen from "../screens/ipad-screens/IpadProductScreen.js"
 
 //Styles
-import { iPadDevice } from "../../components/styles/iPadStyles.js"
+import { iPadDevice } from "../../components/styles/IpadStyles.js"
 
 export default function Ipad(props) {
   //Initial state received from props. Can also be changed from buttons below (1..2..3)
