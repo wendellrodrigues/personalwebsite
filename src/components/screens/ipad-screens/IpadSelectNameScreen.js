@@ -58,19 +58,19 @@ const ContentWrapper = styled.div`
 const Title = styled(iPadTitle)`
   //Smaller desktop
   @media (max-width: 742px) {
-    top: 30%;
+    top: 23%;
     font-size: 30px;
   }
 
   //Tablet
   @media (max-width: 588px) {
-    top: 30%;
+    top: 23%;
     font-size: 20px;
   }
 
   //Phones
   @media (max-width: 400px) {
-    top: 30%;
+    top: 20%;
     font-size: 18px;
   }
 `

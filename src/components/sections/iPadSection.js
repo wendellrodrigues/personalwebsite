@@ -51,14 +51,28 @@ export default function IpadSection() {
 
 const Wrapper = styled.div`
   background: ${projectRetail_themes.blue.background};
-  height: 1200px;
+  height: auto;
   overflow: hidden; //Clip the overflow content
+
+  @media (max-width: 742px) {
+    //height: 1024px;
+  }
+
+  //Tablets
+  @media (max-width: 588px) {
+    //height: 800px;
+  }
+
+  //Phones
+  @media (max-width: 400px) {
+    //height: 568px;
+  }
 `
 
 const ContentWrapper = styled.div`
   max-width: 847px;
   margin: auto;
-  padding: 100px 0px 0px 0px;
+  padding: 70px 0px 0px 0px;
   display: grid;
   gap: 60px;
 
@@ -74,6 +88,16 @@ const Title = styled(H1)`
   @media (max-width: 742px) {
     font-size: 50px;
   }
+
+  //Tablets
+  @media (max-width: 588px) {
+    font-size: 40px;
+  }
+
+  //Phones
+  @media (max-width: 400px) {
+    font-size: 40px;
+  }
 `
 
 const Description = styled(MediumText)`
@@ -82,7 +106,7 @@ const Description = styled(MediumText)`
   margin: auto;
   min-height: 75px;
 
-  @media (max-width: 846px) {
+  @media (max-width: 742px) {
     padding: 0px 20px 0px 20px;
   }
 
@@ -93,7 +117,18 @@ const Description = styled(MediumText)`
 const NextPage = styled(MediumText)`
   color: ${projectRetail_themes.blue.text1};
   margin: auto;
-  margin-top: -20px;
+  margin-top: -0px;
+  margin-bottom: 50px;
+
+  //Tablets
+  @media (max-width: 588px) {
+    margin-bottom: 30px;
+  }
+
+  //Phones
+  @media (max-width: 400px) {
+    margin-bottom: 30px;
+  }
 `
 
 /**

@@ -24,7 +24,7 @@ export default function IpadProductScreen(props) {
   return (
     <Screen>
       <ContentWrapper>
-        <ScreenBackground src="/images/components/ProductScreen.svg" />
+        <ScreenBackground src="/images/components/ProductScreen.png" />
         <FindSizeButtonWrapper>
           <FindSizeButton>
             <ButtonText>Find my size</ButtonText>
