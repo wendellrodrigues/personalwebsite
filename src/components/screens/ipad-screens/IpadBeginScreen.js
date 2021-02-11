@@ -7,7 +7,11 @@ import { projectRetail_themes } from "../../styles/ColorStyles"
 import { H1, MediumText } from "../../styles/TextStyles"
 import { BeginButtonText } from "../../../components/styles/TextStyles"
 
-import { iPadScreen, iPadTitle } from "../../../components/styles/IpadStyles.js"
+import {
+  iPadScreen,
+  iPadTitle,
+  iPadScreenOverlay,
+} from "../../../components/styles/IpadStyles.js"
 
 import {
   PurpleButton,
@@ -15,10 +19,18 @@ import {
 } from "../../../components/styles/ButtonStyles"
 
 export default function IpadBeginScreen(props) {
+  const { loads } = props
+
+  //If load overlay
+  const loadOverlay = loads == 1
+
+  console.log(`LOADS: ${loadOverlay}`)
+
   return (
     <Screen>
       <ContentWrapper>
         <Title>Welcome</Title>
+        {loadOverlay ? <ScreenOverlay /> : ""}
         <ButtonWrapper onClick={() => props.changeScreen(2)}>
           <BeginButton>
             <ButtonText>Begin</ButtonText>
@@ -30,6 +42,22 @@ export default function IpadBeginScreen(props) {
 }
 
 const Screen = styled(iPadScreen)``
+
+const ScreenOverlay = styled(iPadScreenOverlay)`
+  animation: opacityOn 3s normal forwards 1;
+
+  @keyframes opacityOn {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+`
 
 const ContentWrapper = styled.div`
   display: grid;

@@ -28,6 +28,7 @@ export default function ThreeProcessButtonSet(props) {
         state={state}
         changeButton={state => {
           props.changeState(2)
+          props.changeLoads(2)
         }}
       />
       <SmallCircle />
@@ -38,6 +39,7 @@ export default function ThreeProcessButtonSet(props) {
         state={state}
         changeButton={state => {
           props.changeState(3)
+          props.changeLoads(2)
         }}
       />
     </Wrapper>

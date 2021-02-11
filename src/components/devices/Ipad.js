@@ -17,12 +17,14 @@ import { iPadDevice } from "../../components/styles/IpadStyles.js"
 export default function Ipad(props) {
   //Initial state received from props. Can also be changed from buttons below (1..2..3)
   const { state } = props
+  const { loads } = props
 
   //Conditionally renders the screen to the different iPad steps
   const renderScreen = () => {
     if (state == 1) {
       return (
         <IpadBeginScreen
+          loads={loads}
           changeScreen={screen => {
             props.changeState(2)
           }}
