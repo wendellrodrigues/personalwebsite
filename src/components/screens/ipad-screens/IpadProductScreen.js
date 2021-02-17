@@ -17,7 +17,8 @@ import {
 import {
   PurpleButton,
   PurpleButtonText,
-  ProductPageButtons,
+  FindMySizeButton,
+  ExitRedButton,
 } from "../../../components/styles/ButtonStyles"
 
 export default function IpadProductScreen(props) {
@@ -25,11 +26,14 @@ export default function IpadProductScreen(props) {
     <Screen>
       <ContentWrapper>
         <ScreenBackground src="/images/components/ProductScreen.png" />
-        <FindSizeButtonWrapper>
+        <ButtonWrapper>
           <FindSizeButton>
             <ButtonText>Find my size</ButtonText>
           </FindSizeButton>
-        </FindSizeButtonWrapper>
+          <ExitButton onClick={() => props.changeScreen(1)}>
+            <ButtonText>Exit</ButtonText>
+          </ExitButton>
+        </ButtonWrapper>
       </ContentWrapper>
     </Screen>
   )
@@ -46,38 +50,48 @@ const ContentWrapper = styled.div`
   align-items: center;
 `
 
-const FindSizeButtonWrapper = styled.div`
+const ButtonWrapper = styled.div`
   width: 100%;
   position: absolute;
-  top: 55%;
+  top: 52%;
   left: 14%;
-  flex-direction: column;
-  display: flex;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 60px;
 
   @media (max-width: 742px) {
     width: 100%;
     position: absolute;
-    top: 55%;
+    top: 51%;
     left: 17%;
+    gap: 50px;
   }
 
   @media (max-width: 588px) {
     width: 100%;
     position: absolute;
-    top: 54%;
+    top: 50%;
     left: 14%;
+    gap: 30px;
   }
 
   //Smaller phones
   @media (max-width: 400px) {
     width: 100%;
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 19%;
+    gap: 20px;
   }
 `
 
-const FindSizeButton = styled(ProductPageButtons)``
+const FindSizeButton = styled(FindMySizeButton)`
+  position: relative;
+`
+
+const ExitButton = styled(ExitRedButton)`
+  position: relative;
+`
 
 const ButtonText = styled(PurpleButtonText)`
   @media (max-width: 400px) {

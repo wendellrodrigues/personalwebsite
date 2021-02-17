@@ -53,26 +53,27 @@ export const iPadScreen = styled.div`
 
 export const iPadScreenOverlay = styled.div`
   //Starting size
-  width: 616px; //435px;
+  width: 620px; //435px;
   height: 462px; //326px;
   background: black;
   opacity: 0.9;
 
   //Below Max Size
   @media (max-width: 742px) {
+    margin-top: -3px;
     width: 442px; //300
-    height: 330px; //209
+    height: 334px; //209
   }
 
   //Tablets
   @media (max-width: 588px) {
-    width: 286px;
-    height: 215px;
+    width: 289px;
+    height: 218px;
   }
 
   //Phones
   @media (max-width: 400px) {
-    width: 179px;
+    width: 189px;
     height: 134px;
   }
 `

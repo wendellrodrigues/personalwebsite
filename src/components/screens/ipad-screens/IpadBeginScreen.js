@@ -57,6 +57,17 @@ const ScreenOverlay = styled(iPadScreenOverlay)`
       opacity: 0;
     }
   }
+
+  @media (max-width: 588) {
+    opacity: 0;
+    animation: opacityOn 0s normal forwards 1;
+  }
+
+  //Smaller phones
+  @media (max-width: 400px) {
+    opacity: 0;
+    animation: opacityOn 0s normal forwards 1;
+  }
 `
 
 const ContentWrapper = styled.div`

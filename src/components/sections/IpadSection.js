@@ -8,6 +8,7 @@ import { H1, MediumText } from "../../components/styles/TextStyles"
 
 import Ipad from "../devices/Ipad.js"
 import GithubButton from "../../components/buttons/GithubButton"
+import VideoButton from "../../components/buttons/VideoButton"
 import ProcessButton from "../../components/buttons/ProcessButton"
 import ThreeProcessButtonSet from "../../components/buttons/ThreeProcessButtonSet.js"
 
@@ -48,7 +49,11 @@ export default function IpadSection() {
           changeState={state => setState(state)}
           changeLoads={loads => setLoads(loads)}
         />
-        <GithubButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
+        <LinkButtons>
+          <GithubButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
+          <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
+        </LinkButtons>
+
         <NextPage>Find my size</NextPage>
       </ContentWrapper>
     </Wrapper>
@@ -70,6 +75,11 @@ const ContentWrapper = styled.div`
 
   @media (max-width: 742px) {
     gap: 30px;
+  }
+
+  //Phones
+  @media (max-width: 400px) {
+    padding: 30px 0px 0px 0px;
   }
 `
 
@@ -103,10 +113,27 @@ const Description = styled(MediumText)`
     padding: 0px 20px 0px 20px;
   }
 
-  @media (max-width: 450px) {
-    min-height: 176px;
+  @media (max-width: 400px) {
+    min-height: 220px;
   }
 `
+const LinkButtons = styled.div`
+  max-width: 480px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 60px;
+
+  @media (max-width: 588px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 400px) {
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+`
+
 const NextPage = styled(MediumText)`
   color: ${projectRetail_themes.blue.text1};
   margin: auto;

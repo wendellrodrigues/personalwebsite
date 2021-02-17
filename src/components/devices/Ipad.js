@@ -39,7 +39,13 @@ export default function Ipad(props) {
         />
       )
     } else if (state == 3) {
-      return <IpadProductScreen />
+      return (
+        <IpadProductScreen
+          changeScreen={screen => {
+            props.changeState(screen)
+          }}
+        />
+      )
     } else {
       return (
         <IpadBeginScreen

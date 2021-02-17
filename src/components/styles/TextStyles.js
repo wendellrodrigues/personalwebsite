@@ -52,6 +52,12 @@ export const ButtonText = styled.p`
   font-size: 13px;
 `
 
+export const DarkButtonText = styled.p`
+  font-weight: 700;
+  font-size: 13px;
+  color: white;
+`
+
 export const BeginButtonText = styled.p`
   font-weight: 700;
   font-size: 13px;

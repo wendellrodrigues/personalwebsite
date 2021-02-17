@@ -124,7 +124,7 @@ export const PurpleButton = styled.div`
   @media (max-width: 588px) {
     width: 80px;
     height: 25px;
-    border-radius: 8px;
+    border-radius: 10px;
   }
 
     //Smaller phones
@@ -135,7 +135,7 @@ export const PurpleButton = styled.div`
   }
 `
 
-export const ProductPageButtons = styled(PurpleButton)`
+export const FindMySizeButton = styled(PurpleButton)`
   width: 160px; //120px;
   height: 35px; //30px;
 
@@ -149,7 +149,7 @@ export const ProductPageButtons = styled(PurpleButton)`
   @media (max-width: 588px) {
     width: 80px;
     height: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
   }
 
   //Smaller phones
@@ -158,6 +158,10 @@ export const ProductPageButtons = styled(PurpleButton)`
     height: 13px;
     border-radius: 5px;
   }
+`
+
+export const ExitRedButton = styled(FindMySizeButton)`
+  background: #fb776a;
 `
 
 export const PurpleButtonText = styled.p`
@@ -231,3 +235,7 @@ export const GithubButtonBlueStyle = styled.div`
     }
   }
   `
+
+export const VideoButtonStyle = styled(GithubButtonWhiteStyle)`
+  background: black;
+`
