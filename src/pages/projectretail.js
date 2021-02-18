@@ -5,6 +5,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import IphoneSection from "../components/sections/IphoneSection"
 import IpadSection from "../components/sections/IpadSection"
+import ShelfSection from "../components/sections/ShelfSection"
 
 function ProjectRetailPage() {
   return (
@@ -12,6 +13,7 @@ function ProjectRetailPage() {
       <SEO title="Home" />
       <IphoneSection />
       <IpadSection />
+      <ShelfSection />
     </Layout>
   )
 }

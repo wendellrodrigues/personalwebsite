@@ -7,6 +7,8 @@ import { projectRetail_themes } from "../../styles/ColorStyles"
 import { H1, MediumText } from "../../styles/TextStyles"
 import { BeginButtonText } from "../../../components/styles/TextStyles"
 
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+
 import {
   iPadScreen,
   iPadTitle,
@@ -27,9 +29,11 @@ export default function IpadProductScreen(props) {
       <ContentWrapper>
         <ScreenBackground src="/images/components/ProductScreen.png" />
         <ButtonWrapper>
-          <FindSizeButton>
-            <ButtonText>Find my size</ButtonText>
-          </FindSizeButton>
+          <AnchorLink to="projectretail/#shelf">
+            <FindSizeButton>
+              <ButtonText>Find my size</ButtonText>
+            </FindSizeButton>
+          </AnchorLink>
           <ExitButton onClick={() => props.changeScreen(1)}>
             <ButtonText>Exit</ButtonText>
           </ExitButton>
@@ -53,7 +57,7 @@ const ContentWrapper = styled.div`
 const ButtonWrapper = styled.div`
   width: 100%;
   position: absolute;
-  top: 52%;
+  top: 55%;
   left: 14%;
   display: grid;
   grid-template-rows: auto auto;
@@ -62,7 +66,7 @@ const ButtonWrapper = styled.div`
   @media (max-width: 742px) {
     width: 100%;
     position: absolute;
-    top: 51%;
+    top: 55%;
     left: 17%;
     gap: 50px;
   }
@@ -70,7 +74,7 @@ const ButtonWrapper = styled.div`
   @media (max-width: 588px) {
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 14%;
     gap: 30px;
   }
@@ -79,9 +83,9 @@ const ButtonWrapper = styled.div`
   @media (max-width: 400px) {
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: 54%;
     left: 19%;
-    gap: 20px;
+    gap: 15px;
   }
 `
 
