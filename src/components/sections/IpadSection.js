@@ -45,6 +45,7 @@ export default function IpadSection() {
         {renderDescription()}
         {/**Render buttons here */}
         <ThreeProcessButtonSet
+          type="light"
           state={state}
           changeState={state => setState(state)}
           changeLoads={loads => setLoads(loads)}

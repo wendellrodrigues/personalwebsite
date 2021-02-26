@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import { H1, MediumText } from "../../components/styles/TextStyles"
+import { projectRetail_themes } from "../styles/ColorStyles"
 
 //Circle Button that goes into process buttons
 export const BigCircleButton = styled.div`
@@ -43,6 +45,11 @@ export const BigCircleButton = styled.div`
   }
 `
 
+export const DarkBigCircleButton = styled(BigCircleButton)`
+  background: ${props =>
+    props.isSelected ? "black" : projectRetail_themes.blue.background};
+`
+
 //Small Circle (Not button, that goes in between the big circle process buttons)
 export const SmallCircleStyle = styled.div`
   width: 10px;
@@ -67,6 +74,10 @@ export const SmallCircleStyle = styled.div`
     width: 5px;
     height: 5px;
   }
+`
+
+export const DarkSmallCircleStyle = styled(SmallCircleStyle)`
+  background: black;
 `
 
 export const ThreeProcessWrapper = styled.div`
