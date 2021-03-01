@@ -30,20 +30,32 @@ export const BeaconDevice = styled.img`
   width: 100px; //530
   height: 100px; //370
   align-self: center;
+  opacity: 0.1;
 
   margin-bottom: 50px;
 
   //Smaller Desktop
-  @media (max-width: 742px) {
+  @media (max-width: 880px) {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
   }
 
   //Tablets
   @media (max-width: 588px) {
+    width: 30px;
+    height: 30px;
   }
 
   //Phones
   @media (max-width: 400px) {
+    width: 20px;
+    height: 20px;
   }
+`
+
+export const BeaconPlaceholder = styled(BeaconDevice)`
+  opacity: 0.1;
 `
 
 //White Screen of iPad

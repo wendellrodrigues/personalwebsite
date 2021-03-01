@@ -4,6 +4,21 @@ import styled from "styled-components"
 export const H1 = styled.h1`
   font-weight: bold;
   font-size: 50px;
+
+  //Smaller Desktop
+  @media (max-width: 880px) {
+    font-size: 40px;
+  }
+
+  //Tablets
+  @media (max-width: 588px) {
+    font-size: 30px;
+  }
+
+  //Phones
+  @media (max-width: 400px) {
+    font-size: 20px;
+  }
 `
 
 export const H2 = styled.h2`
@@ -32,6 +47,15 @@ export const MediumText = styled.p`
   font-weight: 500;
   font-size: 17px;
   line-height: 130%;
+
+  @media (max-width: 588px) {
+    font-size: 16px;
+  }
+
+  //Phones
+  @media (max-width: 400px) {
+    font-size: 13px;
+  }
 `
 
 export const Caption = styled.p`

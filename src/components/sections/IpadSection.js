@@ -12,6 +12,8 @@ import VideoButton from "../../components/buttons/VideoButton"
 import ProcessButton from "../../components/buttons/ProcessButton"
 import ThreeProcessButtonSet from "../../components/buttons/ThreeProcessButtonSet.js"
 
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+
 import { IpadSectionText } from "../../components/constants.js"
 
 export default function IpadSection() {
@@ -34,7 +36,7 @@ export default function IpadSection() {
   }
 
   return (
-    <Wrapper>
+    <Wrapper id="ipad">
       <ContentWrapper>
         <Title>iPad App</Title>
         <Ipad
@@ -51,11 +53,17 @@ export default function IpadSection() {
           changeLoads={loads => setLoads(loads)}
         />
         <LinkButtons>
-          <GithubButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
+          <GithubButton
+            type="dark"
+            url="https://github.com/wendellrodrigues/projectretail-storeClient"
+          />
           <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
         </LinkButtons>
-
-        <NextPage>Find my size</NextPage>
+        <NextPageWrapper>
+          <AnchorLink to="projectretail/#shelf">
+            <NextPage>Find my size</NextPage>
+          </AnchorLink>
+        </NextPageWrapper>
       </ContentWrapper>
     </Wrapper>
   )
@@ -87,20 +95,6 @@ const ContentWrapper = styled.div`
 const Title = styled(H1)`
   margin: auto;
   color: ${projectRetail_themes.blue.text1};
-
-  @media (max-width: 742px) {
-    font-size: 40px;
-  }
-
-  //Tablets
-  @media (max-width: 588px) {
-    font-size: 40px;
-  }
-
-  //Phones
-  @media (max-width: 400px) {
-    font-size: 40px;
-  }
 `
 
 const Description = styled(MediumText)`
@@ -112,10 +106,11 @@ const Description = styled(MediumText)`
 
   @media (max-width: 742px) {
     padding: 0px 20px 0px 20px;
+    min-height: 130px;
   }
 
   @media (max-width: 400px) {
-    min-height: 220px;
+    min-height: 130px;
   }
 `
 const LinkButtons = styled.div`
@@ -135,11 +130,11 @@ const LinkButtons = styled.div`
   }
 `
 
-const NextPage = styled(MediumText)`
-  color: ${projectRetail_themes.blue.text1};
+const NextPageWrapper = styled.div`
   margin: auto;
-  margin-top: -20px;
   margin-bottom: 50px;
+
+  cursor: pointer;
 
   //Tablets
   @media (max-width: 588px) {
@@ -152,9 +147,6 @@ const NextPage = styled(MediumText)`
     margin-top: -10px;
   }
 `
-
-/**
-    <Wrapper>
-      <p>Hello</p>
-      <BlueBackground />
-    </Wrapper> */
+const NextPage = styled(MediumText)`
+  color: ${projectRetail_themes.blue.text1};
+`
