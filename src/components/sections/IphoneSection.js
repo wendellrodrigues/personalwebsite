@@ -62,7 +62,11 @@ export default function IphoneSection() {
       <ContentWrapper>
         <IphoneColumn>
           <Title>iPhone App</Title>
-          <Iphone />
+          <Iphone
+            state={state}
+            loads={loads}
+            changeState={state => setState(state)}
+          />
         </IphoneColumn>
         <ContentColumn>
           {renderBeacon()}
@@ -104,10 +108,20 @@ const fadeOut = keyframes`
 `
 
 const Wrapper = styled.div`
+  padding: 150px 0px 20px 0px;
   display: grid;
   background: white;
   height: auto;
   overflow: hidden; //Clip the overflow content
+
+  @media (max-width: 1100px) {
+    padding: 90px 0px 20px 0px;
+  }
+
+  //Switches to one column when small screen
+  @media (max-width: 880px) {
+    padding: 0px 0px 0px 0px;
+  }
 `
 
 const ContentWrapper = styled.div`
@@ -117,7 +131,7 @@ const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   gap: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 270px;
 
   @media (max-width: 1100px) {
     gap: 30px;
@@ -127,7 +141,7 @@ const ContentWrapper = styled.div`
   @media (max-width: 880px) {
     grid-template-columns: auto;
     gap: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
 
   //Tablets

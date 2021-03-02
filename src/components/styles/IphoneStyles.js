@@ -1,30 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-export const iPhoneDevice = styled.img`
-  //Starting size
-  width: 260px; //530
-  height: 518px; //370
-
-  //Smaller Desktop
-  @media (max-width: 742px) {
-    width: 588px; //300
-    height: 370px; //209
-  }
-
-  //Tablets
-  @media (max-width: 588px) {
-    width: 345px;
-    height: 243px;
-  }
-
-  //Phones
-  @media (max-width: 400px) {
-    width: 250px;
-    height: 150px;
-  }
-`
-
 export const BeaconDevice = styled.img`
   //Starting size
   width: 100px; //530
@@ -108,5 +84,22 @@ export const iPadScreenOverlay = styled.div`
   @media (max-width: 400px) {
     width: 189px;
     height: 134px;
+  }
+`
+
+export const iPhoneScreen = styled.img`
+  //Starting size
+  width: 260px; //530
+  height: 518px; //370
+
+  @media (max-width: 550px) {
+    width: 130px;
+    height: 256px;
+  }
+
+  //Phones
+  @media (max-width: 400px) {
+    width: 130px;
+    height: 256px;
   }
 `
