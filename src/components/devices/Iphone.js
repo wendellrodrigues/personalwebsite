@@ -6,6 +6,8 @@ import SEO from "../../components/seo"
 import { projectRetail_themes } from "../styles/ColorStyles"
 import { H1, MediumText } from "../styles/TextStyles"
 
+import { iPhoneDevice } from "../../components/styles/IphoneStyles.js"
+
 import IphoneBeginScreen from "../screens/iphone-screens/IphoneBeginScreen.js"
 import IphoneSearchingScreen from "../screens/iphone-screens/IphoneSearchingScreen.js"
 import IphoneFoundShelfScreen from "../screens/iphone-screens/IphoneFoundShelfScreen.js"
@@ -32,25 +34,37 @@ export default function Iphone(props) {
   }
   return (
     <IphoneWrapper>
+      <IphoneImg src="/images/devices/iPhone.svg" />
       <ScreenWrapper>{renderScreen()}</ScreenWrapper>
     </IphoneWrapper>
   )
 }
 
 const IphoneWrapper = styled.div`
-  margin: auto;
+  justify-self: center;
   position: relative;
+  width: 260px; //530
+  height: 518px; //370
+
+  @media (max-width: 550px) {
+    width: 130px;
+    height: 256px;
+  }
+
+  //Phones
+  @media (max-width: 400px) {
+    width: 130px;
+    height: 256px;
+  }
 `
 
 const ScreenWrapper = styled.div`
-  margin: auto;
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
-  top: -5px;
   left: 0px;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
+`
+
+const IphoneImg = styled(iPhoneDevice)`
+  position: absolute;
 `

@@ -108,7 +108,7 @@ const fadeOut = keyframes`
 `
 
 const Wrapper = styled.div`
-  padding: 150px 0px 20px 0px;
+  padding: 80px 0px 20px 0px;
   display: grid;
   background: white;
   height: auto;
@@ -131,7 +131,7 @@ const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   gap: 100px;
-  margin-bottom: 270px;
+  margin-bottom: 220px;
 
   @media (max-width: 1100px) {
     gap: 30px;
