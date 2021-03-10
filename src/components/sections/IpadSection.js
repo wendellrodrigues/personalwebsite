@@ -16,11 +16,13 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import { IpadSectionText } from "../../components/constants.js"
 
-export default function IpadSection() {
+export default function IpadSection(props) {
   //Set state. State controls description and screen
   //State can be changed via screen and buttons
   const [state, setState] = useState(1)
   const [loads, setLoads] = useState(1) //To make sure animation is not being reloaded
+
+  const { setShelfFlash } = props
 
   //Conditionally renders the description based on the state change passed from props
   const renderDescription = () => {
@@ -43,6 +45,7 @@ export default function IpadSection() {
           state={state}
           loads={loads}
           changeState={state => setState(state)}
+          setShelfFlash={setShelfFlash}
         />
         {renderDescription()}
         {/**Render buttons here */}
@@ -59,7 +62,11 @@ export default function IpadSection() {
           />
           <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
         </LinkButtons>
-        <NextPageWrapper>
+        <NextPageWrapper
+          onClick={() => {
+            setShelfFlash(1)
+          }}
+        >
           <AnchorLink to="projectretail/#shelf">
             <NextPage>Find my size</NextPage>
           </AnchorLink>
@@ -78,12 +85,11 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 847px;
   margin: auto;
-  padding: 70px 0px 0px 0px;
+  padding: 50px 0px 0px 0px;
   display: grid;
-  gap: 40px;
+  gap: 30px;
 
   @media (max-width: 742px) {
-    gap: 30px;
   }
 
   //Phones
@@ -95,6 +101,7 @@ const ContentWrapper = styled.div`
 const Title = styled(H1)`
   margin: auto;
   color: ${projectRetail_themes.blue.text1};
+  margin-bottom: 20px;
 `
 
 const Description = styled(MediumText)`
@@ -103,10 +110,12 @@ const Description = styled(MediumText)`
   margin: auto;
   min-height: 175px;
   padding: 30px;
+  margin-bottom: -30px;
 
   @media (max-width: 742px) {
     padding: 0px 20px 0px 20px;
     min-height: 130px;
+    margin-bottom: auto;
   }
 
   @media (max-width: 400px) {

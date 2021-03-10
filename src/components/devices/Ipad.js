@@ -19,6 +19,9 @@ export default function Ipad(props) {
   const { state } = props
   const { loads } = props
 
+  //To flash the shelf on the next section on "Find my Size"
+  const { setShelfFlash } = props
+
   //Conditionally renders the screen to the different iPad steps
   const renderScreen = () => {
     if (state == 1) {
@@ -44,6 +47,7 @@ export default function Ipad(props) {
           changeScreen={screen => {
             props.changeState(screen)
           }}
+          setShelfFlash={setShelfFlash}
         />
       )
     } else {

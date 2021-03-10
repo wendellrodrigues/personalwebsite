@@ -98,7 +98,7 @@ export default function IphoneSection() {
 
 //Fade in animations
 const fadeIn = keyframes`
-  0% { opacity: 0;  }
+  0% { opacity: 0.1;  }
   100% { opacity: 1; }
 `
 
@@ -140,16 +140,18 @@ const ContentWrapper = styled.div`
   //Switches to one column when small screen
   @media (max-width: 880px) {
     grid-template-columns: auto;
-    gap: 10px;
-    margin-bottom: 150px;
+    gap: 40px;
+    margin-bottom: 50px;
   }
 
   //Tablets
   @media (max-width: 588px) {
     margin-bottom: 70px;
+    gap: 70px;
   }
 
   @media (max-width: 400px) {
+    gap: 30px;
     margin-bottom: 50px;
   }
 `
@@ -217,8 +219,13 @@ const Description = styled(MediumText)`
     margin-top: -30px;
   }
 
+  //Tablets
+  @media (max-width: 588px) {
+    min-height: 100px;
+  }
+
   @media (max-width: 400px) {
-    min-height: 160px;
+    min-height: 120px;
   }
 `
 

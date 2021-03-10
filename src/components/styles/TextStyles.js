@@ -45,16 +45,16 @@ export const BodyMain = styled.p`
 
 export const MediumText = styled.p`
   font-weight: 500;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 130%;
 
   @media (max-width: 588px) {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   //Phones
   @media (max-width: 400px) {
-    font-size: 13px;
+    font-size: 12px;
   }
 `
 

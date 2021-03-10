@@ -15,3 +15,8 @@ export const IphoneSectionText = {
   state3_description:
     "The request adds the customer’s ID to the shelf’s nearbyUsers array. When a beacon is out of range ( > 3m), another request is made to the server, removing the customer’s ID from the shelf’s nearbyUsers array. The iPhone application also displays the shelf’s item information upon proximity to the shelf’s beacon.",
 }
+
+export const ShelfSectionText = {
+  description:
+    "When a customer selects Find my Size on the iPad app, the iPad relays a request through our API to an Arduino Web Server with a payload carrying the size requested.  The Arduino receives that request and indicates the specific shelf that holds the size the user requested.",
+}

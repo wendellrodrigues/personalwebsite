@@ -225,5 +225,5 @@ export const GithubButtonGrayStyle = styled(GithubButtonWhiteStyle)`
 `
 
 export const VideoButtonStyle = styled(GithubButtonWhiteStyle)`
-  background: black;
+  background: #2d2d2d;
 `

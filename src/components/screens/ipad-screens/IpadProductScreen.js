@@ -24,13 +24,19 @@ import {
 } from "../../../components/styles/ButtonStyles"
 
 export default function IpadProductScreen(props) {
+  const { setShelfFlash } = props
+
   return (
     <Screen>
       <ContentWrapper>
         <ScreenBackground src="/images/components/ProductScreen.png" />
         <ButtonWrapper>
           <AnchorLink to="projectretail/#shelf">
-            <FindSizeButton>
+            <FindSizeButton
+              onClick={() => {
+                setShelfFlash(1)
+              }}
+            >
               <ButtonText>Find my size</ButtonText>
             </FindSizeButton>
           </AnchorLink>

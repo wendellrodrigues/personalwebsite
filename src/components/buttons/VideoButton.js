@@ -5,7 +5,7 @@ import { ButtonText, DarkButtonText } from "../../components/styles/TextStyles"
 import { VideoButtonStyle } from "../../components/styles/ButtonStyles"
 
 export default function VideoButton(props) {
-  const { url } = props
+  const { type, url } = props
 
   return (
     <Wrapper>

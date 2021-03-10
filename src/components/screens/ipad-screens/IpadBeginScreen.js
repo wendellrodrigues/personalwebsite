@@ -22,7 +22,7 @@ export default function IpadBeginScreen(props) {
   const { loads } = props
 
   //If load overlay
-  const loadOverlay = loads == 1
+  let loadOverlay = loads == 1
 
   console.log(`LOADS: ${loadOverlay}`)
 
