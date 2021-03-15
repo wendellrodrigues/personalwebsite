@@ -114,10 +114,8 @@ export const PurpleButton = styled.div`
     transition: 1s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1); \
   }
   :hover {
+    background: #516afb;
     cursor: pointer;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-      0px 30px 60px rgba(23, 0, 102, 0.5),
-      inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
     transform: translateY(-0.5px) scale(1.01);
     .icon {
       transform: scale(1.01);
@@ -173,6 +171,15 @@ export const FindMySizeButton = styled(PurpleButton)`
 
 export const ExitRedButton = styled(FindMySizeButton)`
   background: #fb776a;
+
+  :hover {
+    background: #fb5f51;
+    cursor: pointer;
+    transform: translateY(-0.5px) scale(1.01);
+    .icon {
+      transform: scale(1.01);
+    }
+  }
 `
 
 export const PurpleButtonText = styled.p`

@@ -20,3 +20,12 @@ export const ShelfSectionText = {
   description:
     "When a customer selects Find my Size on the iPad app, the iPad relays a request through our API to an Arduino Web Server with a payload carrying the size requested.  The Arduino receives that request and indicates the specific shelf that holds the size the user requested.",
 }
+
+export const ComponentSectionText = {
+  beacon_description:
+    "Each shelf is equipped with a Blue Charm BC011-Multibeacon Bluetooth BLE iBeacon. The iBeacons transmit one-way Bluetooth signals which can be detected and ranged using an iPhone. Each beacon is assigned a UUID, a major key, and a minor key. The iPhone applicated detects the beacon’s Bluetooth signals and receives the UUID, major key, and minor key. These are the identifiers that are also stored in the Firestore database’s shelf object for searching. For the purposes of this project, we have one beacon being utilized by our system. ",
+  API_description:
+    "We created the backend using the Express.js framework. The server is utilized by both the iPhone and iPad applications. The server receives requests from customers’ phones when they come in close proximity with a shelf and update the shelf’s nearbyUsers array in the Firestore database. When a customer leaves the close proximity of a shelf (walks away), the server receives another request to remove the customer from the nearbyUsers array. When a customer selects Begin on a shelf iPad, the server also receives a request to list the nearbyUsers, which are gathered from a Firestore shelf object and returned in JSON format. When they select their name, another request is received.",
+  NodeMCU_description:
+    "We created the backend using the Express.js framework. The server is utilized by both the iPhone and iPad applications. The server receives requests from customers’ phones when they come in close proximity with a shelf and update the shelf’s nearbyUsers array in the Firestore database. When a customer leaves the close proximity of a shelf (walks away), the server receives another request to remove the customer from the nearbyUsers array.When a customer selects Begin on a shelf iPad, the server also receives a request to list the nearbyUsers, which are gathered from a Firestore shelf object and returned in JSON format. When they select their name, another request is received.",
+}

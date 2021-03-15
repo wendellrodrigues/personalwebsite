@@ -29,6 +29,15 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
   font-weight: bold;
   font-size: 30px;
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
+
+  //Phones
+  @media (max-width: 400px) {
+    font-size: 20px;
+  }
 `
 
 export const BodyIntro = styled.p`

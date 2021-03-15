@@ -6,6 +6,8 @@ import SEO from "../components/seo"
 import IphoneSection from "../components/sections/IphoneSection"
 import IpadSection from "../components/sections/IpadSection"
 import ShelfSection from "../components/sections/ShelfSection"
+import ComponentSection from "../components/sections/ComponentSection"
+import { Parallax } from "react-parallax"
 
 function ProjectRetailPage() {
   //State for allowing the shelf to flash
@@ -20,6 +22,8 @@ function ProjectRetailPage() {
         flash={shelfFlash}
         setFlash={shelfFlash => setShelfFlash(shelfFlash)}
       />
+
+      <ComponentSection />
     </Layout>
   )
 }

@@ -12,6 +12,8 @@ import { FindMySizeButton, PurpleButtonText } from "../styles/ButtonStyles.js"
 
 import { ShelfSectionText } from "../../components/constants.js"
 
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+
 export default function ShelfSection(props) {
   const { flash, setFlash } = props
 
@@ -47,6 +49,11 @@ export default function ShelfSection(props) {
           />
           <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
         </LinkButtons>
+        <NextPageWrapper>
+          <AnchorLink to="projectretail/#component">
+            <NextPage>Other Components</NextPage>
+          </AnchorLink>
+        </NextPageWrapper>
       </ContentWrapper>
     </Wrapper>
   )
@@ -67,13 +74,13 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 1000px;
   margin: auto;
-  padding: 70px 0px 500px 0px;
+  padding: 70px 0px 30px 0px;
   display: grid;
   gap: 70px;
   justify-content: center;
 
   @media (max-width: 400px) {
-    padding: 30px 0px 100px 0px;
+    padding: 30px 0px 30px 0px;
     gap: 30px; //300
   }
 `
@@ -178,4 +185,26 @@ const LinkButtons = styled.div`
     grid-template-columns: auto;
     gap: 10px;
   }
+`
+
+const NextPageWrapper = styled.div`
+  margin: auto;
+  margin-bottom: 50px;
+
+  cursor: pointer;
+
+  //Tablets
+  @media (max-width: 588px) {
+    margin-bottom: 30px;
+  }
+
+  //Phones
+  @media (max-width: 400px) {
+    margin-bottom: 30px;
+    margin-top: -10px;
+  }
+`
+
+const NextPage = styled(MediumText)`
+  color: white;
 `

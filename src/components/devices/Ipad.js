@@ -22,8 +22,12 @@ export default function Ipad(props) {
   //To flash the shelf on the next section on "Find my Size"
   const { setShelfFlash } = props
 
+  //Scroll percentage of page (1 being dead center)
+  const { percentage } = props
+
   //Conditionally renders the screen to the different iPad steps
   const renderScreen = () => {
+    console.log(props.percentage)
     if (state == 1) {
       return (
         <IpadBeginScreen
@@ -31,6 +35,7 @@ export default function Ipad(props) {
           changeScreen={screen => {
             props.changeState(2)
           }}
+          percentage={percentage}
         />
       )
     } else if (state == 2) {
@@ -39,6 +44,7 @@ export default function Ipad(props) {
           changeScreen={screen => {
             props.changeState(3)
           }}
+          percentage={percentage}
         />
       )
     } else if (state == 3) {
@@ -48,6 +54,7 @@ export default function Ipad(props) {
             props.changeState(screen)
           }}
           setShelfFlash={setShelfFlash}
+          percentage={percentage}
         />
       )
     } else {
@@ -56,6 +63,7 @@ export default function Ipad(props) {
           changeScreen={screen => {
             props.changeState(2)
           }}
+          percentage={percentage}
         />
       )
       props.changeState(1)
@@ -87,4 +95,15 @@ const ScreenWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   display: flex;
+  opacity: 0;
+  animation: opacityOn 3s normal forwards 1;
+
+  @keyframes opacityOn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `

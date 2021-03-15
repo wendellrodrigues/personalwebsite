@@ -15,6 +15,7 @@ import ThreeProcessButtonSet from "../../components/buttons/ThreeProcessButtonSe
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import { IpadSectionText } from "../../components/constants.js"
+import { Parallax } from "react-parallax"
 
 export default function IpadSection(props) {
   //Set state. State controls description and screen
@@ -23,6 +24,8 @@ export default function IpadSection(props) {
   const [loads, setLoads] = useState(1) //To make sure animation is not being reloaded
 
   const { setShelfFlash } = props
+
+  let pagePercentage = 1
 
   //Conditionally renders the description based on the state change passed from props
   const renderDescription = () => {
@@ -39,39 +42,48 @@ export default function IpadSection(props) {
 
   return (
     <Wrapper id="ipad">
-      <ContentWrapper>
-        <Title>iPad App</Title>
-        <Ipad
-          state={state}
-          loads={loads}
-          changeState={state => setState(state)}
-          setShelfFlash={setShelfFlash}
-        />
-        {renderDescription()}
-        {/**Render buttons here */}
-        <ThreeProcessButtonSet
-          type="light"
-          state={state}
-          changeState={state => setState(state)}
-          changeLoads={loads => setLoads(loads)}
-        />
-        <LinkButtons>
-          <GithubButton
-            type="dark"
-            url="https://github.com/wendellrodrigues/projectretail-storeClient"
-          />
-          <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
-        </LinkButtons>
-        <NextPageWrapper
-          onClick={() => {
-            setShelfFlash(1)
-          }}
-        >
-          <AnchorLink to="projectretail/#shelf">
-            <NextPage>Find my size</NextPage>
-          </AnchorLink>
-        </NextPageWrapper>
-      </ContentWrapper>
+      <Parallax
+        renderLayer={percentage => (
+          <ContentWrapper
+            style={{
+              opacity: `${percentage}`,
+            }}
+          >
+            <Title>iPad App</Title>
+            <Ipad
+              state={state}
+              loads={loads}
+              changeState={state => setState(state)}
+              setShelfFlash={setShelfFlash}
+              percentage={percentage}
+            />
+            {renderDescription()}
+            {/**Render buttons here */}
+            <ThreeProcessButtonSet
+              type="light"
+              state={state}
+              changeState={state => setState(state)}
+              changeLoads={loads => setLoads(loads)}
+            />
+            <LinkButtons>
+              <GithubButton
+                type="dark"
+                url="https://github.com/wendellrodrigues/projectretail-storeClient"
+              />
+              <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
+            </LinkButtons>
+            <NextPageWrapper
+              onClick={() => {
+                setShelfFlash(1)
+              }}
+            >
+              <AnchorLink to="projectretail/#shelf">
+                <NextPage>Find my size</NextPage>
+              </AnchorLink>
+            </NextPageWrapper>
+          </ContentWrapper>
+        )}
+      ></Parallax>
     </Wrapper>
   )
 }
@@ -88,6 +100,7 @@ const ContentWrapper = styled.div`
   padding: 50px 0px 0px 0px;
   display: grid;
   gap: 30px;
+  transform: translate() scale(animate);
 
   @media (max-width: 742px) {
   }
