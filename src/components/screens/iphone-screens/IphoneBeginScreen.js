@@ -15,21 +15,38 @@ import {
 } from "../../../components/styles/ButtonStyles"
 
 export default function IphoneBeginScreen(props) {
-  return (
-    <ScreenWrapper>
-      <Screen src="/images/components/IphoneBeginScreen.png" />
-      <ButtonWrapper onClick={() => props.changeScreen(2)}>
-        <SignInButton src="/images/components/SignInButton.png" />
-      </ButtonWrapper>
-    </ScreenWrapper>
-  )
+  //Scroll percentage of page (1 being dead center)
+  const { percentage } = props
+
+  const renderScreen = () => {
+    if (percentage > 0.8) {
+      return (
+        <ScreenWrapper>
+          <Screen src="/images/components/IphoneBeginScreen.png" />
+          <ButtonWrapper onClick={() => props.changeScreen(2)}>
+            <SignInButton src="/images/components/SignInButton.png" />
+          </ButtonWrapper>
+        </ScreenWrapper>
+      )
+    }
+  }
+
+  return <div>{renderScreen()}</div>
 }
 const ScreenWrapper = styled.div`
   display: grid;
+  animation: opacityOn 1s normal forwards 1;
 `
 const Screen = styled(iPhoneScreen)``
 
-const ButtonWrapper = styled.div``
+const ButtonWrapper = styled.div`
+  opacity: 0;
+  animation: opacityOn 1s normal forwards 1;
+  /* animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: 1; */
+  animation-delay: 0.5s;
+`
 
 const SignInButton = styled.img`
   position: absolute;

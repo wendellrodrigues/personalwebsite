@@ -12,14 +12,47 @@ import { ComponentSectionText } from "../../components/constants.js"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export default function ComponentSection(props) {
+  const { state, setState } = props
+
   const loadInfo = () => {
-    return (
-      <InfoWrapper>
-        <ComponentTitle>Beacon</ComponentTitle>
-        <Description>{ComponentSectionText.beacon_description}</Description>
+    console.log(state)
+
+    if (state == 1) {
+      return {
+        title: "Beacon",
+        description: ComponentSectionText.beacon_description,
+      }
+    } else if (state == 2) {
+      return {
+        title: "API",
+        description: ComponentSectionText.beacon_description,
+      }
+    } else if (state == 3) {
+      return {
+        title: "ESP8266 NodeMCU",
+        description: ComponentSectionText.beacon_description,
+      }
+    }
+  }
+
+  const loadButtons = () => {
+    if (state == 1) {
+      return (
         <ButtonWrapper>
           <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
         </ButtonWrapper>
+      )
+    } else if (state == 2) {
+    } else if (state == 3) {
+    }
+  }
+
+  const renderInfo = () => {
+    return (
+      <InfoWrapper>
+        <ComponentTitle>{loadInfo().title}</ComponentTitle>
+        <Description>{loadInfo().description}</Description>
+        {loadButtons()}
       </InfoWrapper>
     )
   }
@@ -30,11 +63,23 @@ export default function ComponentSection(props) {
         <Title>Other Components</Title>
         <BodyWrapper>
           <DeviceWrapper>
-            <Device src="/images/devices/Beacon.svg" />
-            <Device src="/images/devices/Server.svg" />
-            <Device src="/images/devices/NodeMCU.svg" />
+            <Device
+              selected={state == 1}
+              src="/images/devices/Beacon.svg"
+              onClick={() => setState(1)}
+            />
+            <Device
+              selected={state == 2}
+              src="/images/devices/Server.svg"
+              onClick={() => setState(2)}
+            />
+            <Device
+              selected={state == 3}
+              src="/images/devices/NodeMCU.svg"
+              onClick={() => setState(3)}
+            />
           </DeviceWrapper>
-          {loadInfo()}
+          {renderInfo()}
         </BodyWrapper>
       </ContentWrapper>
     </Wrapper>
@@ -120,6 +165,15 @@ const Device = styled.img`
 
   @media (max-width: 500px) {
     width: 70px;
+  }
+
+  opacity: ${props => (props.selected ? "1" : "0.5")};
+  cursor: pointer;
+  animation: fadeIn ease 3s;
+
+  :hover {
+    transform: translateY(-0.5px) scale(1.01);
+    opacity: 0.7;
   }
 `
 

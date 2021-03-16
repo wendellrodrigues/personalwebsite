@@ -114,7 +114,8 @@ export const PurpleButton = styled.div`
     transition: 1s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1); \
   }
   :hover {
-    background: #516afb;
+    filter: hue-rotate(4deg) brightness(110%);
+    //background: #516afb;
     cursor: pointer;
     transform: translateY(-0.5px) scale(1.01);
     .icon {

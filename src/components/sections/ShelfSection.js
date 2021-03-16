@@ -5,8 +5,9 @@ import Image from "../../components/image"
 import SEO from "../../components/seo"
 import { projectRetail_themes } from "../styles/ColorStyles"
 import { H1, MediumText } from "../styles/TextStyles"
-import GithubButton from "../../components/buttons/GithubButton"
+import ArduinoButton from "../../components/buttons/ArduinoButton"
 import VideoButton from "../../components/buttons/VideoButton"
+import { Parallax } from "react-parallax"
 
 import { FindMySizeButton, PurpleButtonText } from "../styles/ButtonStyles.js"
 
@@ -16,45 +17,59 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export default function ShelfSection(props) {
   const { flash, setFlash } = props
+  const { componentState, setComponent } = props
 
   let loadLitShelf = flash == 1
 
   return (
     <Wrapper id="shelf">
-      <ContentWrapper>
-        <Title>Shelf System</Title>
-        <ShelfWrapper>
-          <Shelf src="/images/components/Shelf.svg" />
-          {loadLitShelf ? (
-            <LitShelf
-              onAnimationEnd={() => setFlash(0)}
-              src="/images/components/LitShelf.svg"
-            />
-          ) : (
-            ""
-          )}
-        </ShelfWrapper>
-        <FindSizeButton
-          onClick={() => {
-            setFlash(1)
-          }}
-        >
-          <ButtonText>Find my size</ButtonText>
-        </FindSizeButton>
-        <Description>{ShelfSectionText.description}</Description>
-        <LinkButtons>
-          <GithubButton
-            type="dark"
-            url="https://github.com/wendellrodrigues/projectretail-storeClient"
-          />
-          <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
-        </LinkButtons>
-        <NextPageWrapper>
-          <AnchorLink to="projectretail/#component">
-            <NextPage>Other Components</NextPage>
-          </AnchorLink>
-        </NextPageWrapper>
-      </ContentWrapper>
+      <Parallax
+        renderLayer={percentage => (
+          <ContentWrapper
+            style={{
+              opacity: `${percentage}`,
+            }}
+          >
+            <Title>Shelf System</Title>
+            <ShelfWrapper>
+              <Shelf src="/images/components/Shelf.svg" />
+              {loadLitShelf ? (
+                <LitShelf
+                  onAnimationEnd={() => setFlash(0)}
+                  src="/images/components/LitShelf.svg"
+                />
+              ) : (
+                ""
+              )}
+            </ShelfWrapper>
+            <FindSizeButton
+              onClick={() => {
+                setFlash(1)
+              }}
+            >
+              <ButtonText>Find my size</ButtonText>
+            </FindSizeButton>
+            <Description>{ShelfSectionText.description}</Description>
+            <LinkButtons>
+              <AnchorLink
+                onAnchorLinkClick={() => {
+                  setComponent(3)
+                  console.log("hi")
+                }}
+                to="projectretail/#component"
+              >
+                <ArduinoButton type="dark" />
+              </AnchorLink>
+              <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
+            </LinkButtons>
+            <NextPageWrapper>
+              <AnchorLink to="projectretail/#component">
+                <NextPage>Other Components</NextPage>
+              </AnchorLink>
+            </NextPageWrapper>
+          </ContentWrapper>
+        )}
+      ></Parallax>
     </Wrapper>
   )
 }

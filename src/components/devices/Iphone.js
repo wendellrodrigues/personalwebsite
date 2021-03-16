@@ -16,6 +16,9 @@ export default function Iphone(props) {
   const { state } = props
   const { loads } = props
 
+  //Scroll percentage of page (1 being dead center)
+  const { percentage } = props
+
   const renderScreen = () => {
     if (state == 1) {
       return (
@@ -24,6 +27,7 @@ export default function Iphone(props) {
           changeScreen={screen => {
             props.changeState(2)
           }}
+          percentage={percentage}
         />
       )
     } else if (state == 2) {
