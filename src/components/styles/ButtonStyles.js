@@ -170,16 +170,49 @@ export const FindMySizeButton = styled(PurpleButton)`
   }
 `
 
-export const ExitRedButton = styled(FindMySizeButton)`
-  background: #fb776a;
+export const ExitRedButton = styled.div`
 
+  width: 160px; //120px;
+  height: 35px; //30px;
+  position: absolute;
+  top: 60%;
+  background: #fb776a;
+  border-radius: 12px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  *,
+  & {
+    transition: 1s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1); \
+  }
   :hover {
-    background: #fb5f51;
+    filter: hue-rotate(4deg) brightness(110%);
+    //background: #516afb;
     cursor: pointer;
     transform: translateY(-0.5px) scale(1.01);
     .icon {
       transform: scale(1.01);
     }
+  }
+
+  @media (max-width: 742px) {
+    width: 118px;
+    height: 27px;
+    border-radius: 10px;
+  }
+
+  //iPad
+  @media (max-width: 588px) {
+    width: 80px;
+    height: 20px;
+    border-radius: 8px;
+  }
+
+  //Smaller phones
+  @media (max-width: 400px) {
+    width: 46px;
+    height: 13px;
+    border-radius: 5px;
   }
 `
 

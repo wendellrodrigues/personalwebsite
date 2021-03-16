@@ -122,7 +122,6 @@ const Shelf = styled.img`
 
 const LitShelf = styled.img`
   position: absolute;
-  margin: auto;
   margin-top: 38px;
   opacity: 0;
   animation: ${flash};
