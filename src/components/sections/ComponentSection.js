@@ -105,13 +105,28 @@ const ContentWrapper = styled.div`
     padding: 70px 30px 150px 30px;
     gap: 70px;
   }
+
+  @media (max-width: 744px) {
+    padding: 70px 30px 150px 30px;
+    gap: 30px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 70px 30px 150px 30px;
+    gap: 20px;
+  }
+
+  @media (max-width: 400px) {
+    padding: 70px 30px 150px 30px;
+    gap: 20px;
+  }
 `
 
 const BodyWrapper = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   gap: 100px;
-  margin: auto;
+  //margin: auto;
 
   @media (max-width: 744px) {
     grid-template-columns: auto;
@@ -119,11 +134,11 @@ const BodyWrapper = styled.div`
   }
 
   @media (max-width: 500px) {
-    gap: 50px;
+    gap: 30px;
   }
 
   @media (max-width: 400px) {
-    gap: 40px;
+    gap: 30px;
   }
 `
 
@@ -147,24 +162,32 @@ const DeviceWrapper = styled.div`
   gap: 60px;
 
   @media (max-width: 744px) {
+    //width: 600px;
     display: flex;
-    justify-content: center;
-  }
-
-  @media (max-width: 500px) {
-    gap: 30px;
-  }
-
-  @media (max-width: 400px) {
-    gap: 20px;
+    margin-top: 20px;
+    gap: 0px;
+    //justify-content: center;
+    //align-content: space-around;
   }
 `
 
 const Device = styled.img`
   width: 100px;
 
+  @media (max-width: 744px) {
+    //width: 600px;
+    width: 80px;
+    max-height: 50px;
+    margin-right: 45px;
+    margin-left: 45px;
+    //ustify-content: center;
+    //align-content: space-around;
+  }
+
   @media (max-width: 500px) {
-    width: 70px;
+    width: 50px;
+    margin-right: 15px;
+    margin-left: 15px;
   }
 
   opacity: ${props => (props.selected ? "1" : "0.5")};

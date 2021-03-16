@@ -122,17 +122,17 @@ const Shelf = styled.img`
 
 const LitShelf = styled.img`
   position: absolute;
-  margin-top: 38px;
+  top: 170px;
   opacity: 0;
   animation: ${flash};
   animation-duration: 1s;
-  animation-iteration-count: 3;
+  animation-iteration-count: 15;
   animation-timing-function: ease-in-out;
   animation-delay: 0.5s;
   width: 274px;
 
   @media (max-width: 400px) {
-    margin-top: 19px;
+    top: 86px;
     width: 136px; //300
   }
 `
