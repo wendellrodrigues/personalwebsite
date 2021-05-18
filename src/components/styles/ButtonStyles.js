@@ -235,7 +235,7 @@ export const PurpleButtonText = styled.p`
 `
 
 export const GithubButtonWhiteStyle = styled.div`
- width: 175px;
+  width: 175px;
   height: 41px;
   background: white;
   border-radius: 15px;
@@ -245,10 +245,11 @@ export const GithubButtonWhiteStyle = styled.div`
   grid-template-columns: auto auto;
   gap: 15px;
   color: black;
+  cursor: pointer;
 
   *,
   & {
-    transition: 1s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1); \
+    transition: 1s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   :hover {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
@@ -259,7 +260,7 @@ export const GithubButtonWhiteStyle = styled.div`
       transform: scale(1.01);
     }
   }
-  `
+`
 
 export const GithubButtonGrayStyle = styled(GithubButtonWhiteStyle)`
   background: #d9d9d9;

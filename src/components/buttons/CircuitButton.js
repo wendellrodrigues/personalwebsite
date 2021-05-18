@@ -7,12 +7,13 @@ import {
   GithubButtonGrayStyle,
 } from "../../components/styles/ButtonStyles"
 
-export default function ArduinoButton(props) {
+export default function CircuitButton(props) {
+  const { showModal } = props
   return (
     <Wrapper>
-      <WhiteButton>
-        <Icon src="/images/icons/Arduino-Icon.svg" className="icon" />
-        <Title>View NodeMCU</Title>
+      <WhiteButton onClick={() => props.showModal()}>
+        <Icon src="/images/icons/Circuit-Icon.svg" className="icon" />
+        <Title>Circuit Diagram</Title>
       </WhiteButton>
     </Wrapper>
   )
@@ -23,13 +24,13 @@ const Wrapper = styled.div`
 `
 
 const Icon = styled.img`
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 `
 
 const WhiteButton = styled(GithubButtonWhiteStyle)`
-  background-color: #9ed5d1;
+  background: #c87e7e;
 `
 const Title = styled(ButtonText)`
-  color: #1fa7ac;
+  color: white;
 `

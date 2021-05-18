@@ -25,8 +25,6 @@ export default function IpadBeginScreen(props) {
   //If load overlay
   let loadOverlay = loads == 1
 
-  console.log(`LOADS: ${loadOverlay}`)
-
   const renderScreen = () => {
     if (percentage > 0.8) {
       return (

@@ -27,7 +27,6 @@ export default function Ipad(props) {
 
   //Conditionally renders the screen to the different iPad steps
   const renderScreen = () => {
-    console.log(props.percentage)
     if (state == 1) {
       return (
         <IpadBeginScreen

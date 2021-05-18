@@ -6,6 +6,8 @@ import SEO from "../../components/seo"
 import { projectRetail_themes } from "../styles/ColorStyles"
 import { H1, H3, MediumText } from "../styles/TextStyles"
 import GithubButton from "../../components/buttons/GithubButton"
+
+import CircuitButton from "../../components/buttons/CircuitButton"
 import VideoButton from "../../components/buttons/VideoButton"
 import { FindMySizeButton, PurpleButtonText } from "../styles/ButtonStyles.js"
 import { ComponentSectionText } from "../../components/constants.js"
@@ -14,9 +16,9 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 export default function ComponentSection(props) {
   const { state, setState } = props
 
-  const loadInfo = () => {
-    console.log(state)
+  const { show, showModal } = props
 
+  const loadInfo = () => {
     if (state == 1) {
       return {
         title: "Beacon",
@@ -36,6 +38,10 @@ export default function ComponentSection(props) {
   }
 
   const loadButtons = () => {
+    function sayHi() {
+      console.log("hi")
+    }
+
     if (state == 1) {
       return (
         <ButtonWrapper>
@@ -43,7 +49,25 @@ export default function ComponentSection(props) {
         </ButtonWrapper>
       )
     } else if (state == 2) {
+      return (
+        <ButtonWrapper>
+          <GithubButton
+            type="light"
+            url="https://github.com/wendellrodrigues/projectretail"
+          />
+        </ButtonWrapper>
+      )
     } else if (state == 3) {
+      return (
+        <ThreeColumnButtonWrapper>
+          <GithubButton
+            type="light"
+            url="https://github.com/wendellrodrigues/projectretail"
+          />
+          <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
+          <CircuitButton showModal={showModal} />
+        </ThreeColumnButtonWrapper>
+      )
     }
   }
 
@@ -81,10 +105,21 @@ export default function ComponentSection(props) {
           </DeviceWrapper>
           {renderInfo()}
         </BodyWrapper>
+        <Technologies src="/images/icons/Technologies.svg" className="icon" />
+        <NextPageWrapper>
+          <AnchorLink to="projectretail/#component">
+            <NextPage>Meet the team</NextPage>
+          </AnchorLink>
+        </NextPageWrapper>
       </ContentWrapper>
     </Wrapper>
   )
 }
+
+const fadeIn = keyframes`
+  0% { opacity: 0.1;  }
+  100% { opacity: 1; }
+`
 
 const Wrapper = styled.div`
   background: white;
@@ -96,28 +131,25 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 1000px;
   margin: auto;
-  padding: 150px 30px 150px 30px;
+  padding: 150px 30px 50px 30px;
   display: grid;
   gap: 100px;
   justify-content: center;
 
   @media (max-width: 1000px) {
-    padding: 70px 30px 150px 30px;
+    padding: 70px 30px 50px 30px;
     gap: 70px;
   }
 
   @media (max-width: 744px) {
-    padding: 70px 30px 150px 30px;
     gap: 30px;
   }
 
   @media (max-width: 500px) {
-    padding: 70px 30px 150px 30px;
     gap: 20px;
   }
 
   @media (max-width: 400px) {
-    padding: 70px 30px 150px 30px;
     gap: 20px;
   }
 `
@@ -126,7 +158,6 @@ const BodyWrapper = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   gap: 100px;
-  //margin: auto;
 
   @media (max-width: 744px) {
     grid-template-columns: auto;
@@ -162,12 +193,9 @@ const DeviceWrapper = styled.div`
   gap: 60px;
 
   @media (max-width: 744px) {
-    //width: 600px;
     display: flex;
     margin-top: 20px;
     gap: 0px;
-    //justify-content: center;
-    //align-content: space-around;
   }
 `
 
@@ -192,7 +220,7 @@ const Device = styled.img`
 
   opacity: ${props => (props.selected ? "1" : "0.5")};
   cursor: pointer;
-  animation: fadeIn ease 3s;
+  transition: 1s 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   :hover {
     transform: translateY(-0.5px) scale(1.01);
@@ -209,8 +237,60 @@ const Description = styled(MediumText)`
   margin-top: -30px;
 `
 const ButtonWrapper = styled.div`
+  opacity: 0;
   align-self: end;
+  animation: ${fadeIn} 1s 0.1s forwards;
   @media (max-width: 744px) {
     justify-self: center;
   }
+`
+
+const ThreeColumnButtonWrapper = styled.div`
+  opacity: 0;
+  align-self: end;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  justify-self: start;
+  animation: ${fadeIn} 1s 0.1s forwards;
+
+  @media (max-width: 744px) {
+    justify-self: center;
+  }
+
+  @media (max-width: 500px) {
+    justify-self: center;
+    grid-template-columns: auto;
+    gap: 15px;
+  }
+`
+
+const Technologies = styled.img`
+  margin-top: 100px;
+  width: 100%;
+
+  @media (max-width: 400px) {
+    margin-top: 20px;
+    width: 90%;
+    margin: auto;
+  }
+`
+const NextPageWrapper = styled.div`
+  margin: auto;
+  cursor: pointer;
+
+  //Tablets
+  @media (max-width: 588px) {
+    margin-bottom: 10px;
+  }
+  //Phones
+  @media (max-width: 400px) {
+    margin-bottom: 30px;
+    margin-top: -10px;
+    margin: auto;
+  }
+`
+
+const NextPage = styled(MediumText)`
+  color: black;
 `

@@ -54,11 +54,10 @@ export default function ShelfSection(props) {
               <AnchorLink
                 onAnchorLinkClick={() => {
                   setComponent(3)
-                  console.log("hi")
                 }}
                 to="projectretail/#component"
               >
-                <ArduinoButton type="dark" />
+                <ArduinoButton />
               </AnchorLink>
               <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
             </LinkButtons>
@@ -126,7 +125,7 @@ const LitShelf = styled.img`
   opacity: 0;
   animation: ${flash};
   animation-duration: 1s;
-  animation-iteration-count: 15;
+  animation-iteration-count: 2;
   animation-timing-function: ease-in-out;
   animation-delay: 0.5s;
   width: 274px;

@@ -20,7 +20,7 @@ export default function ThreeProcessButtonSet(props) {
           number={1}
           state={state}
           changeButton={state => {
-            console.log(type)
+
             props.changeState(1)
           }}
         />
