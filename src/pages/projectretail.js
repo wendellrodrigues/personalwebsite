@@ -9,6 +9,7 @@ import TitleSection from "../components/sections/TitleSection"
 import IpadSection from "../components/sections/IpadSection"
 import ShelfSection from "../components/sections/ShelfSection"
 import ComponentSection from "../components/sections/ComponentSection"
+import TeamSection from "../components/sections/TeamSection"
 import { Parallax } from "react-parallax"
 import CircuitModal from "../components/sections/CircuitModal"
 
@@ -60,6 +61,7 @@ function ProjectRetailPage() {
           show={show}
           showModal={showModal}
         />
+        <TeamSection />
       </Wrapper>
       {displayModal()}
     </Layout>

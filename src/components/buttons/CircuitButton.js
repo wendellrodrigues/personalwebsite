@@ -13,7 +13,7 @@ export default function CircuitButton(props) {
     <Wrapper>
       <WhiteButton onClick={() => props.showModal()}>
         <Icon src="/images/icons/Circuit-Icon.svg" className="icon" />
-        <Title>Circuit Diagram</Title>
+        <Title>Circuit Images</Title>
       </WhiteButton>
     </Wrapper>
   )

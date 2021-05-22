@@ -22,17 +22,17 @@ export default function ComponentSection(props) {
     if (state == 1) {
       return {
         title: "Beacon",
-        description: ComponentSectionText.beacon_description,
+        description: ComponentSectionText.Beacon_description,
       }
     } else if (state == 2) {
       return {
         title: "API",
-        description: ComponentSectionText.beacon_description,
+        description: ComponentSectionText.API_description,
       }
     } else if (state == 3) {
       return {
-        title: "ESP8266 NodeMCU",
-        description: ComponentSectionText.beacon_description,
+        title: "Shelf Circuit",
+        description: ComponentSectionText.Circuit_description,
       }
     }
   }
@@ -99,7 +99,7 @@ export default function ComponentSection(props) {
             />
             <Device
               selected={state == 3}
-              src="/images/devices/NodeMCU.svg"
+              src="/images/devices/Circuit.svg"
               onClick={() => setState(3)}
             />
           </DeviceWrapper>
@@ -107,7 +107,7 @@ export default function ComponentSection(props) {
         </BodyWrapper>
         <Technologies src="/images/icons/Technologies.svg" className="icon" />
         <NextPageWrapper>
-          <AnchorLink to="projectretail/#component">
+          <AnchorLink to="projectretail/#team">
             <NextPage>Meet the team</NextPage>
           </AnchorLink>
         </NextPageWrapper>

@@ -12,7 +12,7 @@ export default function ArduinoButton(props) {
     <Wrapper>
       <WhiteButton>
         <Icon src="/images/icons/Arduino-Icon.svg" className="icon" />
-        <Title>View NodeMCU</Title>
+        <Title>View Circuit</Title>
       </WhiteButton>
     </Wrapper>
   )
