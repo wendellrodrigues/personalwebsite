@@ -22,7 +22,6 @@ export default function TitleSection(props) {
     <Wrapper id="title">
       <ContentWrapper>
         <Title src="/images/icons/ProjectRetailTitle.png" />
-
         <VideoWrapper>
           <iframe
             src="https://www.youtube.com/embed/etmvmL8-_Xg"
@@ -35,7 +34,7 @@ export default function TitleSection(props) {
         </VideoWrapper>
         <Description>{IntroductionText}</Description>
         <NextPageWrapper>
-          <AnchorLink to="projectretail/#iphone">
+          <AnchorLink to="/#iphone">
             <NextPage>Learn More</NextPage>
           </AnchorLink>
         </NextPageWrapper>

@@ -31,7 +31,7 @@ export default function IpadProductScreen(props) {
       <ContentWrapper>
         <ScreenBackground src="/images/components/ProductScreen.png" />
         <ButtonWrapper>
-          <AnchorLink to="projectretail/#shelf">
+          <AnchorLink to="/#shelf">
             <FindSizeButton
               onClick={() => {
                 setShelfFlash(1)

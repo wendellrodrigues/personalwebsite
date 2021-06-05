@@ -27,7 +27,7 @@ export default function ShelfSection(props) {
         renderLayer={percentage => (
           <ContentWrapper
             style={{
-              opacity: `${percentage}`,
+              opacity: 1,
             }}
           >
             <Title>Shelf System</Title>
@@ -55,14 +55,14 @@ export default function ShelfSection(props) {
                 onAnchorLinkClick={() => {
                   setComponent(3)
                 }}
-                to="projectretail/#component"
+                to="/#component"
               >
                 <ArduinoButton />
               </AnchorLink>
               <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
             </LinkButtons>
             <NextPageWrapper>
-              <AnchorLink to="projectretail/#component">
+              <AnchorLink to="/#component">
                 <NextPage>Other Components</NextPage>
               </AnchorLink>
             </NextPageWrapper>

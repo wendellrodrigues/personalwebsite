@@ -64,7 +64,7 @@ export default function IphoneSection() {
         renderLayer={percentage => (
           <ContentWrapper
             style={{
-              opacity: `${percentage}`,
+              opacity: 1,
             }}
           >
             <IphoneColumn>
@@ -98,7 +98,7 @@ export default function IphoneSection() {
         )}
       ></Parallax>
       <NextPageWrapper>
-        <AnchorLink to="projectretail/#ipad">
+        <AnchorLink to="/#ipad">
           <NextPage>Continue</NextPage>
         </AnchorLink>
       </NextPageWrapper>

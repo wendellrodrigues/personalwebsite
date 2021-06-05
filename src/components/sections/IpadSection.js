@@ -46,7 +46,7 @@ export default function IpadSection(props) {
         renderLayer={percentage => (
           <ContentWrapper
             style={{
-              opacity: `${percentage}`,
+              opacity: 1,
             }}
           >
             <Title>iPad App</Title>
@@ -77,7 +77,7 @@ export default function IpadSection(props) {
                 setShelfFlash(1)
               }}
             >
-              <AnchorLink to="projectretail/#shelf">
+              <AnchorLink to="/#shelf">
                 <NextPage>Find my size</NextPage>
               </AnchorLink>
             </NextPageWrapper>

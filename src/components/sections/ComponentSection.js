@@ -107,7 +107,7 @@ export default function ComponentSection(props) {
         </BodyWrapper>
         <Technologies src="/images/icons/Technologies.svg" className="icon" />
         <NextPageWrapper>
-          <AnchorLink to="projectretail/#team">
+          <AnchorLink to="/#team">
             <NextPage>Meet the team</NextPage>
           </AnchorLink>
         </NextPageWrapper>

@@ -25,7 +25,7 @@ export default function TeamSection(props) {
         renderLayer={percentage => (
           <ContentWrapper
             style={{
-              opacity: `${percentage}`,
+              opacity: 1,
             }}
           >
             <Title>Team</Title>
@@ -36,7 +36,7 @@ export default function TeamSection(props) {
               <Profile person={camille} />
             </ProfileWrapper>
             <AnchorWrapper>
-              <AnchorLink to="projectretail/#title">
+              <AnchorLink to="/#title">
                 <Logo src="/images/icons/Logo.svg" />
               </AnchorLink>
             </AnchorWrapper>
