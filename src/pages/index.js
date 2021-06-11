@@ -10,42 +10,18 @@ import IpadSection from "../components/sections/IpadSection"
 import ShelfSection from "../components/sections/ShelfSection"
 import ComponentSection from "../components/sections/ComponentSection"
 import TeamSection from "../components/sections/TeamSection"
+import Footer from "../components/sections/Footer"
 import { Parallax } from "react-parallax"
-import CircuitModal from "../components/sections/CircuitModal"
 
 const IndexPage = () => {
   //State for allowing the shelf to flash
   const [shelfFlash, setShelfFlash] = useState(0)
   const [componentState, setComponentState] = useState(1)
 
-  //For circuit modal
-  const [show, setShow] = useState(false)
-
-  //Modal for circuit diagram
-  const showModal = () => {
-    setShow(true)
-    console.log(show)
-  }
-
-  const hideModal = () => {
-    setShow(false)
-    console.log(show)
-  }
-
-  const displayModal = () => {
-    if (show == true) {
-      return (
-        <ModalWrapper show={show}>
-          <CircuitModal show={show} hideModal={hideModal} />
-        </ModalWrapper>
-      )
-    }
-  }
-
   return (
     <Layout>
       <SEO title="Home" />
-      <Wrapper show={show}>
+      <Wrapper>
         <TitleSection />
         <IphoneSection />
         <IpadSection setShelfFlash={shelfFlash => setShelfFlash(shelfFlash)} />
@@ -58,12 +34,10 @@ const IndexPage = () => {
         <ComponentSection
           state={componentState}
           setState={componentState => setComponentState(componentState)}
-          show={show}
-          showModal={showModal}
         />
         <TeamSection />
+        <Footer />
       </Wrapper>
-      {displayModal()}
     </Layout>
   )
 }

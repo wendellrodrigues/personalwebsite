@@ -63,3 +63,8 @@ export const ProfileText = {
     link: "https://www.linkedin.com/in/christopher-mamuad-66b100212/",
   },
 }
+
+export const FooterText = {
+  line1: "Site designed and created by Wendell Rodrigues",
+  line2: "All rights Reserved",
+}
