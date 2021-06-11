@@ -1,3 +1,11 @@
+export const menuData = [
+  { title: "iPhone App", link: "/#iphone" },
+  { title: "iPad App", link: "/#ipad" },
+  { title: "Shelf", link: "/#shelf" },
+  { title: "Other Components", link: "/#component" },
+  { title: "Team", link: "/#team" },
+]
+
 export const IntroductionText =
   "Project Retail is an interactive solution for retail shoppers who wish to have their experience tailored directly to their needs. The project was undertaken as a senior capstone project at San Jose State University"
 

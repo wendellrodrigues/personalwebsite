@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-
 import { iPadScreen, iPadTitle } from "../../../components/styles/IpadStyles.js"
 
 import {

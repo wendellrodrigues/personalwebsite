@@ -84,6 +84,11 @@ export const ButtonText = styled.p`
   font-size: 13px;
 `
 
+export const MenuButtonText = styled.p`
+  font-weight: bold;
+  font-size: 15px;
+`
+
 export const DarkButtonText = styled.p`
   font-weight: 700;
   font-size: 13px;

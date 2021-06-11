@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import Header from "../components/sections/Header"
 import IphoneSection from "../components/sections/IphoneSection"
 import TitleSection from "../components/sections/TitleSection"
 import IpadSection from "../components/sections/IpadSection"
@@ -19,6 +21,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <Wrapper>
+        <Header />
         <TitleSection />
         <IphoneSection />
         <IpadSection setShelfFlash={shelfFlash => setShelfFlash(shelfFlash)} />
