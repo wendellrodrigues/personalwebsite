@@ -45,7 +45,7 @@ export default function ComponentSection(props) {
     if (state == 1) {
       return (
         <ButtonWrapper>
-          <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
+          <VideoButton url="https://www.youtube.com/watch?v=etmvmL8-_Xg&list=PLZ5gmo-fqIUHvlW3LAPlnsw9Pe3Q2CQL9&index=2" />
         </ButtonWrapper>
       )
     } else if (state == 2) {
@@ -53,7 +53,7 @@ export default function ComponentSection(props) {
         <ButtonWrapper>
           <GithubButton
             type="light"
-            url="https://github.com/wendellrodrigues/projectretail"
+            url="https://github.com/wendellrodrigues/projectretail-server"
           />
         </ButtonWrapper>
       )
@@ -62,10 +62,10 @@ export default function ComponentSection(props) {
         <ThreeColumnButtonWrapper>
           <GithubButton
             type="light"
-            url="https://github.com/wendellrodrigues/projectretail"
+            url="https://github.com/wendellrodrigues/projectretail-arduino"
           />
-          <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
-          <CircuitButton showModal={showModal} />
+          <VideoButton url="https://www.youtube.com/watch?v=etmvmL8-_Xg&list=PLZ5gmo-fqIUHvlW3LAPlnsw9Pe3Q2CQL9&index=2" />
+          <CircuitButton url="https://www.flickr.com/photos/193053728@N06/albums/72157719217811691" />
         </ThreeColumnButtonWrapper>
       )
     }
@@ -129,14 +129,14 @@ const Wrapper = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  max-width: 1000px;
+  max-width: 847px;
   margin: auto;
   padding: 150px 30px 50px 30px;
   display: grid;
   gap: 100px;
   justify-content: center;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 847px) {
     padding: 70px 30px 50px 30px;
     gap: 70px;
   }

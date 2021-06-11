@@ -126,6 +126,14 @@ const CarouselWrapper = styled.div`
   width: 90%;
   height: 130%;
   margin-top: 50px;
+
+  @media (max-width: 742px) {
+    height: 100%;
+  }
+
+  @media (max-width: 400px) {
+    height: 100%;
+  }
 `
 
 const CarouselImageWrapper = styled.div`

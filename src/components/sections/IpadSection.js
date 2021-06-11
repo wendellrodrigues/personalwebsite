@@ -70,7 +70,7 @@ export default function IpadSection(props) {
                 type="dark"
                 url="https://github.com/wendellrodrigues/projectretail-storeClient"
               />
-              <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
+              <VideoButton url="https://www.youtube.com/watch?v=_phTHTs-axo&feature=youtu.be" />
             </LinkButtons>
             <NextPageWrapper
               onClick={() => {

@@ -69,6 +69,16 @@ const VideoWrapper = styled.div`
   width: 735px;
   height: 413px;
 
+  @media (max-width: 742px) {
+    width: 515px;
+    height: 290px;
+  }
+
+  @media (max-width: 400px) {
+    width: 368px;
+    height: 205px;
+  }
+
   .video {
     position: absolute;
     width: 100%;
@@ -80,6 +90,14 @@ const Title = styled.img`
   margin: auto;
   width: 500px;
   margin-top: 150px;
+
+  @media (max-width: 742px) {
+    width: 300px;
+  }
+
+  @media (max-width: 400px) {
+    width: 200px;
+  }
 `
 
 const Description = styled(MediumText)`

@@ -8,13 +8,15 @@ import {
 } from "../../components/styles/ButtonStyles"
 
 export default function CircuitButton(props) {
-  const { showModal } = props
+  const { url } = props
   return (
     <Wrapper>
-      <WhiteButton onClick={() => props.showModal()}>
-        <Icon src="/images/icons/Circuit-Icon.svg" className="icon" />
-        <Title>Circuit Images</Title>
-      </WhiteButton>
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        <WhiteButton>
+          <Icon src="/images/icons/Circuit-Icon.svg" className="icon" />
+          <Title>Circuit Images</Title>
+        </WhiteButton>
+      </a>
     </Wrapper>
   )
 }

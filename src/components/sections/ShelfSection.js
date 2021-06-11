@@ -59,7 +59,7 @@ export default function ShelfSection(props) {
               >
                 <ArduinoButton />
               </AnchorLink>
-              <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
+              <VideoButton url="https://www.youtube.com/playlist?list=PLZ5gmo-fqIUHvlW3LAPlnsw9Pe3Q2CQL9" />
             </LinkButtons>
             <NextPageWrapper>
               <AnchorLink to="/#component">

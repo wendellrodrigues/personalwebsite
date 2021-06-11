@@ -91,7 +91,7 @@ export default function IphoneSection() {
                   type="light"
                   url="https://github.com/wendellrodrigues/projectretail"
                 />
-                <VideoButton url="https://github.com/wendellrodrigues/projectretail-storeClient" />
+                <VideoButton url="https://www.youtube.com/playlist?list=PLZ5gmo-fqIUHK7txQQ2PFyjLDtU8SWAd4" />
               </LinkButtons>
             </ContentColumn>
           </ContentWrapper>
