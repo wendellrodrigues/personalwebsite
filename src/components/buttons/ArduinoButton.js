@@ -1,11 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+
 import { ButtonText } from "../../components/styles/TextStyles"
-import {
-  GithubButtonWhiteStyle,
-  GithubButtonGrayStyle,
-} from "../../components/styles/ButtonStyles"
+import { GithubButtonWhiteStyle } from "../../components/styles/ButtonStyles"
 
 export default function ArduinoButton(props) {
   return (

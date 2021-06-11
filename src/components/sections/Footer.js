@@ -5,6 +5,7 @@ import SEO from "../../components/seo"
 import { projectRetail_themes } from "../styles/ColorStyles"
 import { H1, H3, MediumText } from "../styles/TextStyles"
 import { FooterText } from "../../components/constants.js"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export default function Footer() {
   const url = "https://github.com/wendellrodrigues/personalwebsite"
@@ -12,6 +13,11 @@ export default function Footer() {
   return (
     <Wrapper>
       <ContentWrapper>
+        <AnchorWrapper>
+          <AnchorLink to="/#title">
+            <Logo src="/images/icons/Logo.svg" />
+          </AnchorLink>
+        </AnchorWrapper>
         <Description>
           <a href={url} target="_blank" rel="noopener noreferrer">
             <Description>{FooterText.line1}</Description>
@@ -25,7 +31,7 @@ export default function Footer() {
 
 const Wrapper = styled.div`
   background: black;
-  height: 150px;
+  height: auto;
   display: grid;
 `
 
@@ -37,5 +43,17 @@ const ContentWrapper = styled.div`
 
 const Description = styled(MediumText)`
   margin: auto;
+  margin-bottom: 8px;
   color: white;
+`
+
+const Logo = styled.img`
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  margin-bottom: 20px;
+`
+
+const AnchorWrapper = styled.div`
+  margin: auto;
 `

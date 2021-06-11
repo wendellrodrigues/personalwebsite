@@ -37,34 +37,34 @@ export const ProfileText = {
   Wendell: {
     name: "Wendell",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Wendell Rodrigues is a recent graduate of San Jose State University where he majored in Industrial Technology with a concentration in Computer Technology and Network Electronics. Wendell is also a skilled and eager Software Engineer who is experienced in a variety of frameworks, technologies, and languages including React.js, Node.js, iOS, Arduino, Python, and Java.",
     photo: "/images/people/Wendell.png",
     link: "https://www.linkedin.com/in/wendellrodrigues/",
   },
   Chris: {
     name: "Chris",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Chris is a recent graduate of San Jose State University with a major in Industrial Technology with a conentration in Computer Electronics and Network Technology. He also has a minor in Business Administration. Chris is an avid learner and always willing and able to tackle any task he undertakes.",
     photo: "/images/people/Chris.png",
     link: "https://www.linkedin.com/in/christopher-mamuad-66b100212/",
   },
   Camille: {
     name: "Camille",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    photo: "/images/people/Wendell.png",
-    link: "https://www.linkedin.com/in/christopher-mamuad-66b100212/",
+      "Growing up in Silicon Valley, Camille has always been fascinated by the rapid advancement of technology. This led to her passion for technology and software engineering. Camille graduated from San Jose State Univerity in 2021 with a Bachelors in Industrial Technology and minors Computer Science and Business. Camille is also a skilled software engineer, proficient in Java, and has experience with MySQL, Python, JavaScript, HTML, and CSS.",
+    photo: "/images/people/Camille.png",
+    link: "https://www.linkedin.com/in/camillebarker/",
   },
   Kilho: {
     name: "Kilho",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    photo: "/images/people/Wendell.png",
-    link: "https://www.linkedin.com/in/christopher-mamuad-66b100212/",
+      "Kilho is an international student from South Korea majoring in Industrial Technology with a minor in Business Administration. His passion is exploring and learning new technologies. He recently graduated from San Jose State University in May 2021. Kilho is proficient in Javascript, HTML, CSS, Flutter, Python, Dart, PostgreSQL, and Selenium Webdriver.",
+    photo: "/images/people/Kilho.jpg",
+    link: "https://www.linkedin.com/in/kilho-chang-683123148/",
   },
 }
 
 export const FooterText = {
   line1: "Site designed and created by Wendell Rodrigues",
-  line2: "All rights Reserved",
+  line2: "2021 All Rights Reserved",
 }

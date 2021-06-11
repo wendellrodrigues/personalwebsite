@@ -35,11 +35,6 @@ export default function TeamSection(props) {
               <Profile person={kilho} />
               <Profile person={camille} />
             </ProfileWrapper>
-            <AnchorWrapper>
-              <AnchorLink to="/#title">
-                <Logo src="/images/icons/Logo.svg" />
-              </AnchorLink>
-            </AnchorWrapper>
           </ContentWrapper>
         )}
       ></Parallax>
@@ -73,7 +68,12 @@ const Title = styled(H1)`
   position: relative;
   margin: auto;
   color: white;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
+
+  @media (max-width: 880px) {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
 `
 
 const ProfileWrapper = styled.div`
@@ -83,7 +83,7 @@ const ProfileWrapper = styled.div`
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 
   @media (max-width: 1100px) {
     gap: 70px;
@@ -92,20 +92,19 @@ const ProfileWrapper = styled.div`
 
   //Switches to one column when small screen
   @media (max-width: 880px) {
-    grid-template-columns: auto;
-    gap: 40px;
-    margin-bottom: 50px;
+    gap: 50px;
   }
 
   //Tablets
   @media (max-width: 588px) {
-    margin-bottom: 70px;
-    gap: 70px;
+    grid-template-columns: auto;
+    margin-bottom: 50px;
+    gap: 40px;
   }
 
   @media (max-width: 400px) {
     gap: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 `
 
@@ -114,11 +113,10 @@ const Logo = styled.img`
   width: 100px;
   position: relative;
   margin: auto;
-  margin-bottom: 150px;
+  margin-bottom: 20px;
 `
 
 const AnchorWrapper = styled.div`
   position: relative;
   margin: auto;
-  margin-bottom: 150px;
 `

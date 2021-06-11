@@ -28,10 +28,10 @@ export const H2 = styled.h2`
 
 export const H3 = styled.h3`
   font-weight: bold;
-  font-size: 30px;
+  font-size: 40px;
 
   @media (max-width: 500px) {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   //Phones
