@@ -1,15 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
-import Layout from "../../components/layout"
-import Image from "../../components/image"
-import SEO from "../../components/seo"
 import { projectRetail_themes } from "../styles/ColorStyles"
-import { H1, MediumText } from "../../components/styles/TextStyles"
-
+import { H1 } from "../../components/styles/TextStyles"
 import Profile from "../Profile.js"
-
-import { AnchorLink } from "gatsby-plugin-anchor-links"
-
 import { ProfileText } from "../../components/constants.js"
 import { Parallax } from "react-parallax"
 
@@ -106,17 +99,4 @@ const ProfileWrapper = styled.div`
     gap: 30px;
     margin-bottom: 30px;
   }
-`
-
-const Logo = styled.img`
-  height: 100px;
-  width: 100px;
-  position: relative;
-  margin: auto;
-  margin-bottom: 20px;
-`
-
-const AnchorWrapper = styled.div`
-  position: relative;
-  margin: auto;
 `

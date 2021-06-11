@@ -1,35 +1,28 @@
-import React, { useState } from "react"
+import React from "react"
 import styled, { keyframes } from "styled-components"
-import Layout from "../../components/layout"
-import Image from "../../components/image"
-import SEO from "../../components/seo"
-import { projectRetail_themes } from "../styles/ColorStyles"
 import { H1, H3, MediumText } from "../styles/TextStyles"
 import GithubButton from "../../components/buttons/GithubButton"
 
 import CircuitButton from "../../components/buttons/CircuitButton"
 import VideoButton from "../../components/buttons/VideoButton"
-import { FindMySizeButton, PurpleButtonText } from "../styles/ButtonStyles.js"
 import { ComponentSectionText } from "../../components/constants.js"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export default function ComponentSection(props) {
   const { state, setState } = props
 
-  const { show, showModal } = props
-
   const loadInfo = () => {
-    if (state == 1) {
+    if (state === 1) {
       return {
         title: "Beacon",
         description: ComponentSectionText.Beacon_description,
       }
-    } else if (state == 2) {
+    } else if (state === 2) {
       return {
         title: "API",
         description: ComponentSectionText.API_description,
       }
-    } else if (state == 3) {
+    } else if (state === 3) {
       return {
         title: "Shelf Circuit",
         description: ComponentSectionText.Circuit_description,
@@ -38,17 +31,13 @@ export default function ComponentSection(props) {
   }
 
   const loadButtons = () => {
-    function sayHi() {
-      console.log("hi")
-    }
-
-    if (state == 1) {
+    if (state === 1) {
       return (
         <ButtonWrapper>
           <VideoButton url="https://www.youtube.com/watch?v=etmvmL8-_Xg&list=PLZ5gmo-fqIUHvlW3LAPlnsw9Pe3Q2CQL9&index=2" />
         </ButtonWrapper>
       )
-    } else if (state == 2) {
+    } else if (state === 2) {
       return (
         <ButtonWrapper>
           <GithubButton
@@ -57,7 +46,7 @@ export default function ComponentSection(props) {
           />
         </ButtonWrapper>
       )
-    } else if (state == 3) {
+    } else if (state === 3) {
       return (
         <ThreeColumnButtonWrapper>
           <GithubButton
@@ -88,17 +77,17 @@ export default function ComponentSection(props) {
         <BodyWrapper>
           <DeviceWrapper>
             <Device
-              selected={state == 1}
+              selected={state === 1}
               src="/images/devices/Beacon.svg"
               onClick={() => setState(1)}
             />
             <Device
-              selected={state == 2}
+              selected={state === 2}
               src="/images/devices/Server.svg"
               onClick={() => setState(2)}
             />
             <Device
-              selected={state == 3}
+              selected={state === 3}
               src="/images/devices/Circuit.svg"
               onClick={() => setState(3)}
             />

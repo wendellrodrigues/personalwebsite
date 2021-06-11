@@ -1,11 +1,5 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
-import Layout from "../../components/layout"
-import Image from "../../components/image"
-import SEO from "../../components/seo"
-import { projectRetail_themes } from "../styles/ColorStyles"
-import { H1, MediumText } from "../styles/TextStyles"
-
 import { iPhoneDevice } from "../../components/styles/IphoneStyles.js"
 
 import IphoneBeginScreen from "../screens/iphone-screens/IphoneBeginScreen.js"
@@ -20,7 +14,7 @@ export default function Iphone(props) {
   const { percentage } = props
 
   const renderScreen = () => {
-    if (state == 1) {
+    if (state === 1) {
       return (
         <IphoneBeginScreen
           loads={loads}
@@ -30,9 +24,9 @@ export default function Iphone(props) {
           percentage={percentage}
         />
       )
-    } else if (state == 2) {
+    } else if (state === 2) {
       return <IphoneSearchingScreen />
-    } else if (state == 3) {
+    } else if (state === 3) {
       return <IphoneFoundShelfScreen />
     }
   }

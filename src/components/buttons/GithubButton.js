@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 import { ButtonText } from "../../components/styles/TextStyles"
 import {
   GithubButtonWhiteStyle,
@@ -11,7 +10,7 @@ export default function GithubButton(props) {
   const { type, url } = props
 
   const renderButton = () => {
-    if (type == "light") {
+    if (type === "light") {
       return (
         <BlueButton>
           <Icon src="/images/icons/github-icon.svg" className="icon" />

@@ -1,8 +1,5 @@
-import React, { useState } from "react"
+import React from "react"
 import styled, { keyframes } from "styled-components"
-import Layout from "../../components/layout"
-import Image from "../../components/image"
-import SEO from "../../components/seo"
 import { projectRetail_themes } from "../styles/ColorStyles"
 import { H1, MediumText } from "../styles/TextStyles"
 import ArduinoButton from "../../components/buttons/ArduinoButton"
@@ -17,9 +14,9 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export default function ShelfSection(props) {
   const { flash, setFlash } = props
-  const { componentState, setComponent } = props
+  const { setComponent } = props
 
-  let loadLitShelf = flash == 1
+  let loadLitShelf = flash === 1
 
   return (
     <Wrapper id="shelf">

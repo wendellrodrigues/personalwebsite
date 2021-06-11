@@ -1,10 +1,5 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
-import Layout from "../../components/layout"
-import Image from "../../components/image"
-import SEO from "../../components/seo"
-import { projectRetail_themes } from "../styles/ColorStyles"
-import { H1, MediumText } from "../styles/TextStyles"
 
 //Screens for the iPad
 import IpadBeginScreen from "../screens/ipad-screens/IpadBeginScreen.js"
@@ -27,7 +22,7 @@ export default function Ipad(props) {
 
   //Conditionally renders the screen to the different iPad steps
   const renderScreen = () => {
-    if (state == 1) {
+    if (state === 1) {
       return (
         <IpadBeginScreen
           loads={loads}
@@ -37,7 +32,7 @@ export default function Ipad(props) {
           percentage={percentage}
         />
       )
-    } else if (state == 2) {
+    } else if (state === 2) {
       return (
         <IpadSelectNameScreen
           changeScreen={screen => {
@@ -46,7 +41,7 @@ export default function Ipad(props) {
           percentage={percentage}
         />
       )
-    } else if (state == 3) {
+    } else if (state === 3) {
       return (
         <IpadProductScreen
           changeScreen={screen => {
@@ -65,7 +60,6 @@ export default function Ipad(props) {
           percentage={percentage}
         />
       )
-      props.changeState(1)
     }
   }
 

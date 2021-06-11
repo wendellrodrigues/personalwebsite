@@ -1,15 +1,9 @@
 import React, { useState } from "react"
 import styled, { keyframes } from "styled-components"
-import Layout from "../../components/layout"
-import Image from "../../components/image"
-import SEO from "../../components/seo"
-import { projectRetail_themes } from "../styles/ColorStyles"
 import { H1, MediumText } from "../../components/styles/TextStyles"
-
 import Iphone from "../devices/Iphone.js"
 import GithubButton from "../../components/buttons/GithubButton"
 import VideoButton from "../../components/buttons/VideoButton"
-import ProcessButton from "../../components/buttons/ProcessButton"
 import ThreeProcessButtonSet from "../../components/buttons/ThreeProcessButtonSet.js"
 
 import { AnchorLink } from "gatsby-plugin-anchor-links"
@@ -27,11 +21,11 @@ export default function IphoneSection() {
 
   //Conditionally renders the description based on the state change passed from props
   const renderDescription = () => {
-    if (state == 1) {
+    if (state === 1) {
       return <Description>{IphoneSectionText.state1_description}</Description>
-    } else if (state == 2) {
+    } else if (state === 2) {
       return <Description>{IphoneSectionText.state2_description}</Description>
-    } else if (state == 3) {
+    } else if (state === 3) {
       return <Description>{IphoneSectionText.state3_description}</Description>
     } else {
       setState(1)
@@ -39,7 +33,7 @@ export default function IphoneSection() {
   }
 
   const renderBeacon = () => {
-    if (state != 1) {
+    if (state !== 1) {
       return (
         <BeaconImg
           className="beacon"
@@ -110,11 +104,6 @@ export default function IphoneSection() {
 const fadeIn = keyframes`
   0% { opacity: 0.1;  }
   100% { opacity: 1; }
-`
-
-const fadeOut = keyframes`
-  0% { opacity: 1;  }
-  100% { opacity: 0; }
 `
 
 const Wrapper = styled.div`

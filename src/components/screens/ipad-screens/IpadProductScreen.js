@@ -1,23 +1,13 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
-import Layout from "../../../components/layout"
-import Image from "../../../components/image"
-import SEO from "../../../components/seo"
-import { projectRetail_themes } from "../../styles/ColorStyles"
-import { H1, MediumText } from "../../styles/TextStyles"
-import { BeginButtonText } from "../../../components/styles/TextStyles"
-
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import {
   iPadScreen,
-  iPadTitle,
-  iPadSubtitle,
   ProductBackground,
 } from "../../../components/styles/IpadStyles.js"
 
 import {
-  PurpleButton,
   PurpleButtonText,
   FindMySizeButton,
   ExitRedButton,

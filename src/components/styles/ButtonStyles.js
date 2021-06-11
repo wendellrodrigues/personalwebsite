@@ -1,6 +1,4 @@
-import React from "react"
 import styled from "styled-components"
-import { H1, MediumText } from "../../components/styles/TextStyles"
 import { projectRetail_themes } from "../styles/ColorStyles"
 
 //Circle Button that goes into process buttons

@@ -4,17 +4,16 @@ import styled from "styled-components"
 import {
   BigCircleButton,
   DarkBigCircleButton,
-  SmallCircleStyle,
 } from "../../components/styles/ButtonStyles.js"
 
 export default function ProcessButton(props) {
   //Props it will receive is the number (step)
   const { type, number, state } = props
 
-  if (type == "dark") {
+  if (type === "dark") {
     return (
       <DarkWrapper
-        isSelected={state == number}
+        isSelected={state === number}
         onClick={() => props.changeButton()}
       >
         <DarkNumber>{number}</DarkNumber>
@@ -23,7 +22,7 @@ export default function ProcessButton(props) {
   } else {
     return (
       <Wrapper
-        isSelected={state == number}
+        isSelected={state === number}
         onClick={() => props.changeButton()}
       >
         <Number>{number}</Number>

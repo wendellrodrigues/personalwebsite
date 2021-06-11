@@ -1,9 +1,6 @@
-import React, { useState } from "react"
-import styled, { keyframes } from "styled-components"
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
-import { projectRetail_themes } from "../styles/ColorStyles"
-import { H1, H3, MediumText } from "../styles/TextStyles"
+import React from "react"
+import styled from "styled-components"
+import { MediumText } from "../styles/TextStyles"
 import { FooterText } from "../../components/constants.js"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 

@@ -1,17 +1,7 @@
-import React, { useState } from "react"
-import styled, { keyframes } from "styled-components"
-import Layout from "../../../components/layout"
-import Image from "../../../components/image"
-import SEO from "../../../components/seo"
-import { projectRetail_themes } from "../../styles/ColorStyles"
-import { H1, MediumText } from "../../styles/TextStyles"
-import { BeginButtonText } from "../../../components/styles/TextStyles"
+import React from "react"
+import styled from "styled-components"
 
-import {
-  iPadScreen,
-  iPadTitle,
-  iPadScreenOverlay,
-} from "../../../components/styles/IpadStyles.js"
+import { iPadScreen, iPadTitle } from "../../../components/styles/IpadStyles.js"
 
 import {
   PurpleButton,
@@ -19,11 +9,7 @@ import {
 } from "../../../components/styles/ButtonStyles"
 
 export default function IpadBeginScreen(props) {
-  const { loads } = props
   const { percentage } = props
-
-  //If load overlay
-  let loadOverlay = loads == 1
 
   const renderScreen = () => {
     if (percentage > 0.8) {
@@ -81,11 +67,6 @@ const ButtonWrapper = styled.div`
   @media (max-width: 400px) {
     top: 55%;
   }
-`
-
-const pulse = keyframes`
-  0% { transform: scale(1);  }
-  100% { transform: scale(1.5); }
 `
 
 const BeginButton = styled(PurpleButton)`

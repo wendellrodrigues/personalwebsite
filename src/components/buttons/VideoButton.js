@@ -1,11 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
-import { ButtonText, DarkButtonText } from "../../components/styles/TextStyles"
+import { DarkButtonText } from "../../components/styles/TextStyles"
 import { VideoButtonStyle } from "../../components/styles/ButtonStyles"
 
 export default function VideoButton(props) {
-  const { type, url } = props
+  const { url } = props
 
   return (
     <Wrapper>

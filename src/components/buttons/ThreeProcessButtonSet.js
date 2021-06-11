@@ -1,9 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import ProcessButton from "./ProcessButton.js"
 
 import {
-  BigCirleButton,
   SmallCircleStyle,
   DarkSmallCircleStyle,
   ThreeProcessWrapper,
@@ -12,7 +11,7 @@ import {
 export default function ThreeProcessButtonSet(props) {
   const { type, state } = props
 
-  if (type == "dark") {
+  if (type === "dark") {
     return (
       <Wrapper>
         <ProcessButton
@@ -20,7 +19,6 @@ export default function ThreeProcessButtonSet(props) {
           number={1}
           state={state}
           changeButton={state => {
-
             props.changeState(1)
           }}
         />
