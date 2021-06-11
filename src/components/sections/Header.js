@@ -27,7 +27,7 @@ export default function Header() {
         {menuData.map((item, index) => (
           <MenuButton item={item} key={index} />
         ))}
-        <HamburgerWrapper>
+        {/* <HamburgerWrapper>
           <MenuButton
             item={{
               title: "",
@@ -36,7 +36,7 @@ export default function Header() {
             }}
             onClick={event => handleClick(event)}
           />
-        </HamburgerWrapper>
+        </HamburgerWrapper> */}
       </MenuWrapper>
     </Wrapper>
   )
@@ -75,10 +75,10 @@ const Logo = styled.img`
   }
 `
 
-const HamburgerWrapper = styled.div`
-  display: none;
+// const HamburgerWrapper = styled.div`
+//   display: none;
 
-  @media (max-width: 900px) {
-    display: block;
-  }
-`
+//   @media (max-width: 900px) {
+//     display: block;
+//   }
+// `

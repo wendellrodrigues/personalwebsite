@@ -79,11 +79,22 @@ const Title = styled.img`
   width: 500px;
   margin-top: 150px;
 
+  @media (max-width: 1000px) {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 850px) {
+    margin-top: 70px;
+    width: 300px;
+  }
+
   @media (max-width: 742px) {
+    margin-top: 50px;
     width: 300px;
   }
 
   @media (max-width: 400px) {
+    margin-top: 30px;
     width: 200px;
   }
 `
@@ -105,7 +116,7 @@ const Description = styled(MediumText)`
   }
 
   @media (max-width: 400px) {
-    min-height: 130px;
+    min-height: 50px;
   }
 `
 
