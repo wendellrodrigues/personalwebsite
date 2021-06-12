@@ -62,9 +62,14 @@ const VideoWrapper = styled.div`
     height: 290px;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 530px) {
     width: 368px;
     height: 205px;
+  }
+
+  @media (max-width: 400px) {
+    width: 276px;
+    height: 154px;
   }
 
   .video {

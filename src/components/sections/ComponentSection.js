@@ -111,14 +111,17 @@ const fadeIn = keyframes`
 `
 
 const Wrapper = styled.div`
+  max-width: 850px;
+  margin: auto;
   background: white;
   height: auto;
   display: grid;
   margin: auto;
+  overflow: hidden;
 `
 
 const ContentWrapper = styled.div`
-  max-width: 847px;
+  max-width: 850px;
   margin: auto;
   padding: 150px 30px 50px 30px;
   display: grid;
@@ -148,7 +151,7 @@ const BodyWrapper = styled.div`
   grid-template-columns: auto auto;
   gap: 100px;
 
-  @media (max-width: 744px) {
+  @media (max-width: 850px) {
     grid-template-columns: auto;
     justify-items: center;
   }
@@ -166,13 +169,14 @@ const InfoWrapper = styled.div`
   position: relative;
   display: grid;
 
-  @media (max-width: 744px) {
+  @media (max-width: 900px) {
     gap: 60px;
+    width: 90%;
   }
 `
 
 const Title = styled(H1)`
-  @media (max-width: 744px) {
+  @media (max-width: 850px) {
     justify-self: center;
   }
 `
@@ -181,7 +185,7 @@ const DeviceWrapper = styled.div`
   display: grid;
   gap: 60px;
 
-  @media (max-width: 744px) {
+  @media (max-width: 850px) {
     display: flex;
     margin-top: 20px;
     gap: 0px;
@@ -191,7 +195,7 @@ const DeviceWrapper = styled.div`
 const Device = styled.img`
   width: 100px;
 
-  @media (max-width: 744px) {
+  @media (max-width: 850px) {
     //width: 600px;
     width: 80px;
     max-height: 50px;
@@ -218,7 +222,7 @@ const Device = styled.img`
 `
 
 const ComponentTitle = styled(H3)`
-  @media (max-width: 744px) {
+  @media (max-width: 850px) {
     justify-self: center;
   }
 `
@@ -229,7 +233,7 @@ const ButtonWrapper = styled.div`
   opacity: 0;
   align-self: end;
   animation: ${fadeIn} 1s 0.1s forwards;
-  @media (max-width: 744px) {
+  @media (max-width: 850px) {
     justify-self: center;
   }
 `
@@ -243,20 +247,30 @@ const ThreeColumnButtonWrapper = styled.div`
   justify-self: start;
   animation: ${fadeIn} 1s 0.1s forwards;
 
-  @media (max-width: 744px) {
+  @media (max-width: 850px) {
     justify-self: center;
+    grid-template-columns: auto;
+    margin-bottom: -50px;
   }
 
   @media (max-width: 500px) {
     justify-self: center;
-    grid-template-columns: auto;
     gap: 15px;
+    margin-bottom: 00px;
+  }
+
+  @media (max-width: 400px) {
+    margin-bottom: 20px;
   }
 `
 
 const Technologies = styled.img`
   margin-top: 100px;
   width: 100%;
+
+  @media (max-width: 850px) {
+    width: 90%;
+  }
 
   @media (max-width: 400px) {
     margin-top: 20px;

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Project Retail App`,
+    description: `TECH190A/B Senior Project at San Jose State. Group members: Wendell Rodrigues, Christopher Mahmoud, Kilho Chang, and Camille Barker`,
+    author: `Wendell Rodrigues`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `static/images/icons/github-icon.svg`, // This path is relative to the root of the site.
+        icon: `static/images/icons/Logo.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-styled-components`,
