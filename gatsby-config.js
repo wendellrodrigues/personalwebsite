@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Project Retail App`,
-    description: `TECH190A/B Senior Project at San Jose State. Group members: Wendell Rodrigues, Christopher Mahmoud, Kilho Chang, and Camille Barker`,
+    description: `TECH190A/B Senior Project at San Jose State. Group members: Wendell Rodrigues, Christopher Mamuad, Kilho Chang, and Camille Barker`,
     author: `Wendell Rodrigues`,
   },
   plugins: [
