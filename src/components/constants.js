@@ -52,7 +52,7 @@ export const ProfileText = {
   Chris: {
     name: "Chris",
     description:
-      "Chris is a recent graduate of San Jose State University with a major in Industrial Technology with a conentration in Computer Electronics and Network Technology. He also has a minor in Business Administration. Chris is an quick learner and always able to tackle any task he undertakes. He is an experienced technical writer with excellent communication and presentation skills. Chris has a strong background in statistical process control, and is also proficient in problem solving and economic decision making.",
+      "Chris is a recent graduate of San Jose State University with a major in Industrial Technology with a conentration in Computer Electronics and Network Technology. He is an experienced technical writer with excellent communication and presentation skills. Chris has a strong background in statistical process control, and is also proficient in problem solving and economic decision making.",
     photo: "/images/people/Chris.png",
     link: "https://www.linkedin.com/in/christopher-mamuad-66b100212/",
   },
