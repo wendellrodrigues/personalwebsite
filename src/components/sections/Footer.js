@@ -5,7 +5,7 @@ import { FooterText } from "../../components/constants.js"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export default function Footer() {
-  const url = "https://github.com/wendellrodrigues/personalwebsite"
+  const url = "https://github.com/wendellrodrigues/projectretail-website"
 
   return (
     <Wrapper>
