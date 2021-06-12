@@ -45,14 +45,14 @@ export const ProfileText = {
   Wendell: {
     name: "Wendell",
     description:
-      "Wendell Rodrigues is a recent graduate of San Jose State University where he majored in Industrial Technology with a concentration in Computer Technology and Network Electronics. Wendell is also a skilled and eager Software Engineer who is experienced in a variety of frameworks, technologies, and languages including React.js, Node.js, iOS, Arduino, Python, and Java.",
+      "Wendell Rodrigues is a recent graduate of San Jose State University where he majored in Industrial Technology with a concentration in Computer Technology and Network Electronics. Wendell is also a skilled and eager Software Engineer / Full Stack Developer who is experienced in a variety of frameworks, technologies, and languages including React.js, Node.js, iOS, Arduino, Python, Java, and cloud technologies.",
     photo: "/images/people/Wendell.png",
     link: "https://www.linkedin.com/in/wendellrodrigues/",
   },
   Chris: {
     name: "Chris",
     description:
-      "Chris is a recent graduate of San Jose State University with a major in Industrial Technology with a conentration in Computer Electronics and Network Technology. He also has a minor in Business Administration. Chris is an avid learner and always willing and able to tackle any task he undertakes.",
+      "Chris is a recent graduate of San Jose State University with a major in Industrial Technology with a conentration in Computer Electronics and Network Technology. He also has a minor in Business Administration. Chris is an quick learner and always able to tackle any task he undertakes. He is an experienced technical writer with excellent communication and presentation skills. Chris has a strong background in statistical process control, and is also proficient in problem solving and economic decision making.",
     photo: "/images/people/Chris.png",
     link: "https://www.linkedin.com/in/christopher-mamuad-66b100212/",
   },
@@ -66,7 +66,7 @@ export const ProfileText = {
   Kilho: {
     name: "Kilho",
     description:
-      "Kilho is an international student from South Korea majoring in Industrial Technology with a minor in Business Administration. His passion is exploring and learning new technologies. He recently graduated from San Jose State University in May 2021. Kilho is proficient in Javascript, HTML, CSS, Flutter, Python, Dart, PostgreSQL, and Selenium Webdriver.",
+      "Kilho is an international student from South Korea majoring in Industrial Technology with a minor in Business Administration. His passion is exploring and learning new technologies. He recently graduated from San Jose State University in May 2021. Kilho is proficient in Javascript, HTML, CSS, Flutter, Python, Dart, PostgreSQL, and Selenium Webdriver. Kilho also is skilled at 3-D printing and modeling",
     photo: "/images/people/Kilho.jpg",
     link: "https://www.linkedin.com/in/kilho-chang-683123148/",
   },
